@@ -14,6 +14,7 @@
 from __future__ import absolute_import
 
 # import models into model package
+from swagger_client.models.any_of_validation_error_loc_items import AnyOfValidationErrorLocItems
 from swagger_client.models.api_response import ApiResponse
 from swagger_client.models.http_validation_error import HTTPValidationError
 from swagger_client.models.ih_close import IHClose

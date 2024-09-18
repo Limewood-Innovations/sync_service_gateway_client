@@ -28,12 +28,12 @@ class Mahnstufe(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'bukrs': 'object',
-        'customer_number': 'object',
-        'dunning_block_reason': 'object',
-        'transaction_id': 'object',
-        'state': 'object',
-        'creation_date': 'object'
+        'bukrs': 'int',
+        'customer_number': 'int',
+        'dunning_block_reason': 'str',
+        'transaction_id': 'str',
+        'state': 'str',
+        'creation_date': 'datetime'
     }
 
     attribute_map = {
@@ -45,7 +45,7 @@ class Mahnstufe(object):
         'creation_date': 'creation_date'
     }
 
-    def __init__(self, bukrs=None, customer_number=None, dunning_block_reason=None, transaction_id=None, state=None, creation_date=None):  # noqa: E501
+    def __init__(self, bukrs=None, customer_number=None, dunning_block_reason=None, transaction_id='37a12837-c9ba-4edf-b21d-e64e900d2e10', state='initial', creation_date=None):  # noqa: E501
         """Mahnstufe - a model defined in Swagger"""  # noqa: E501
         self._bukrs = None
         self._customer_number = None
@@ -70,7 +70,7 @@ class Mahnstufe(object):
 
 
         :return: The bukrs of this Mahnstufe.  # noqa: E501
-        :rtype: object
+        :rtype: int
         """
         return self._bukrs
 
@@ -80,7 +80,7 @@ class Mahnstufe(object):
 
 
         :param bukrs: The bukrs of this Mahnstufe.  # noqa: E501
-        :type: object
+        :type: int
         """
         if bukrs is None:
             raise ValueError("Invalid value for `bukrs`, must not be `None`")  # noqa: E501
@@ -93,7 +93,7 @@ class Mahnstufe(object):
 
 
         :return: The customer_number of this Mahnstufe.  # noqa: E501
-        :rtype: object
+        :rtype: int
         """
         return self._customer_number
 
@@ -103,7 +103,7 @@ class Mahnstufe(object):
 
 
         :param customer_number: The customer_number of this Mahnstufe.  # noqa: E501
-        :type: object
+        :type: int
         """
         if customer_number is None:
             raise ValueError("Invalid value for `customer_number`, must not be `None`")  # noqa: E501
@@ -116,7 +116,7 @@ class Mahnstufe(object):
 
 
         :return: The dunning_block_reason of this Mahnstufe.  # noqa: E501
-        :rtype: object
+        :rtype: str
         """
         return self._dunning_block_reason
 
@@ -126,7 +126,7 @@ class Mahnstufe(object):
 
 
         :param dunning_block_reason: The dunning_block_reason of this Mahnstufe.  # noqa: E501
-        :type: object
+        :type: str
         """
         if dunning_block_reason is None:
             raise ValueError("Invalid value for `dunning_block_reason`, must not be `None`")  # noqa: E501
@@ -139,7 +139,7 @@ class Mahnstufe(object):
 
 
         :return: The transaction_id of this Mahnstufe.  # noqa: E501
-        :rtype: object
+        :rtype: str
         """
         return self._transaction_id
 
@@ -149,7 +149,7 @@ class Mahnstufe(object):
 
 
         :param transaction_id: The transaction_id of this Mahnstufe.  # noqa: E501
-        :type: object
+        :type: str
         """
 
         self._transaction_id = transaction_id
@@ -160,7 +160,7 @@ class Mahnstufe(object):
 
 
         :return: The state of this Mahnstufe.  # noqa: E501
-        :rtype: object
+        :rtype: str
         """
         return self._state
 
@@ -170,7 +170,7 @@ class Mahnstufe(object):
 
 
         :param state: The state of this Mahnstufe.  # noqa: E501
-        :type: object
+        :type: str
         """
 
         self._state = state
@@ -181,7 +181,7 @@ class Mahnstufe(object):
 
 
         :return: The creation_date of this Mahnstufe.  # noqa: E501
-        :rtype: object
+        :rtype: datetime
         """
         return self._creation_date
 
@@ -191,7 +191,7 @@ class Mahnstufe(object):
 
 
         :param creation_date: The creation_date of this Mahnstufe.  # noqa: E501
-        :type: object
+        :type: datetime
         """
 
         self._creation_date = creation_date

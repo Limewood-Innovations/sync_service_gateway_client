@@ -56,6 +56,13 @@ class TestIHNotificationsApi(unittest.TestCase):
         """
         pass
 
+    def test_get_ihcreate_by_state_ihcreate_find_by_state_post(self):
+        """Test case for get_ihcreate_by_state_ihcreate_find_by_state_post
+
+        Get Ihcreate By State  # noqa: E501
+        """
+        pass
+
     def test_get_ihcreate_ihcreate_get(self):
         """Test case for get_ihcreate_ihcreate_get
 

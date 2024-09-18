@@ -28,9 +28,9 @@ class MahnstufeCreate(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'bukrs': 'object',
-        'customer_number': 'object',
-        'dunning_block_reason': 'object'
+        'bukrs': 'int',
+        'customer_number': 'int',
+        'dunning_block_reason': 'str'
     }
 
     attribute_map = {
@@ -55,7 +55,7 @@ class MahnstufeCreate(object):
 
 
         :return: The bukrs of this MahnstufeCreate.  # noqa: E501
-        :rtype: object
+        :rtype: int
         """
         return self._bukrs
 
@@ -65,7 +65,7 @@ class MahnstufeCreate(object):
 
 
         :param bukrs: The bukrs of this MahnstufeCreate.  # noqa: E501
-        :type: object
+        :type: int
         """
         if bukrs is None:
             raise ValueError("Invalid value for `bukrs`, must not be `None`")  # noqa: E501
@@ -78,7 +78,7 @@ class MahnstufeCreate(object):
 
 
         :return: The customer_number of this MahnstufeCreate.  # noqa: E501
-        :rtype: object
+        :rtype: int
         """
         return self._customer_number
 
@@ -88,7 +88,7 @@ class MahnstufeCreate(object):
 
 
         :param customer_number: The customer_number of this MahnstufeCreate.  # noqa: E501
-        :type: object
+        :type: int
         """
         if customer_number is None:
             raise ValueError("Invalid value for `customer_number`, must not be `None`")  # noqa: E501
@@ -101,7 +101,7 @@ class MahnstufeCreate(object):
 
 
         :return: The dunning_block_reason of this MahnstufeCreate.  # noqa: E501
-        :rtype: object
+        :rtype: str
         """
         return self._dunning_block_reason
 
@@ -111,7 +111,7 @@ class MahnstufeCreate(object):
 
 
         :param dunning_block_reason: The dunning_block_reason of this MahnstufeCreate.  # noqa: E501
-        :type: object
+        :type: str
         """
         if dunning_block_reason is None:
             raise ValueError("Invalid value for `dunning_block_reason`, must not be `None`")  # noqa: E501

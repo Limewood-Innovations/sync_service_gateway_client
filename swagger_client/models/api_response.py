@@ -28,9 +28,9 @@ class ApiResponse(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'code': 'object',
-        'transaction_id': 'object',
-        'message': 'object'
+        'code': 'int',
+        'transaction_id': 'str',
+        'message': 'str'
     }
 
     attribute_map = {
@@ -55,7 +55,7 @@ class ApiResponse(object):
 
 
         :return: The code of this ApiResponse.  # noqa: E501
-        :rtype: object
+        :rtype: int
         """
         return self._code
 
@@ -65,7 +65,7 @@ class ApiResponse(object):
 
 
         :param code: The code of this ApiResponse.  # noqa: E501
-        :type: object
+        :type: int
         """
         if code is None:
             raise ValueError("Invalid value for `code`, must not be `None`")  # noqa: E501
@@ -78,7 +78,7 @@ class ApiResponse(object):
 
 
         :return: The transaction_id of this ApiResponse.  # noqa: E501
-        :rtype: object
+        :rtype: str
         """
         return self._transaction_id
 
@@ -88,7 +88,7 @@ class ApiResponse(object):
 
 
         :param transaction_id: The transaction_id of this ApiResponse.  # noqa: E501
-        :type: object
+        :type: str
         """
         if transaction_id is None:
             raise ValueError("Invalid value for `transaction_id`, must not be `None`")  # noqa: E501
@@ -101,7 +101,7 @@ class ApiResponse(object):
 
 
         :return: The message of this ApiResponse.  # noqa: E501
-        :rtype: object
+        :rtype: str
         """
         return self._message
 
@@ -111,7 +111,7 @@ class ApiResponse(object):
 
 
         :param message: The message of this ApiResponse.  # noqa: E501
-        :type: object
+        :type: str
         """
         if message is None:
             raise ValueError("Invalid value for `message`, must not be `None`")  # noqa: E501

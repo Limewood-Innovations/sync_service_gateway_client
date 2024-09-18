@@ -3,9 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**code** | **object** |  | 
-**transaction_id** | **object** |  | 
-**message** | **object** |  | 
+**code** | **int** |  | 
+**transaction_id** | **str** |  | 
+**message** | **str** |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

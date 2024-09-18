@@ -8,6 +8,7 @@ Method | HTTP request | Description
 [**add_ihcreate_ihcreate_post**](IHNotificationsApi.md#add_ihcreate_ihcreate_post) | **POST** /ihcreate | Add Ihcreate
 [**get_ihclose_ihclose_get**](IHNotificationsApi.md#get_ihclose_ihclose_get) | **GET** /ihclose | Get Ihclose
 [**get_ihcreate_by_id_ihcreate_transaction_id_get**](IHNotificationsApi.md#get_ihcreate_by_id_ihcreate_transaction_id_get) | **GET** /ihcreate/{transaction_id} | Get Ihcreate By Id
+[**get_ihcreate_by_state_ihcreate_find_by_state_post**](IHNotificationsApi.md#get_ihcreate_by_state_ihcreate_find_by_state_post) | **POST** /ihcreate/findByState | Get Ihcreate By State
 [**get_ihcreate_ihcreate_get**](IHNotificationsApi.md#get_ihcreate_ihcreate_get) | **GET** /ihcreate | get ihcreate
 
 # **add_ihclose_ihclose_post**
@@ -103,7 +104,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_ihclose_ihclose_get**
-> object get_ihclose_ihclose_get()
+> list[IHClose] get_ihclose_ihclose_get()
 
 Get Ihclose
 
@@ -131,7 +132,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**object**
+[**list[IHClose]**](IHClose.md)
 
 ### Authorization
 
@@ -159,7 +160,7 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = swagger_client.IHNotificationsApi()
-transaction_id = NULL # object | 
+transaction_id = 'transaction_id_example' # str | 
 
 try:
     # Get Ihcreate By Id
@@ -173,7 +174,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **transaction_id** | [**object**](.md)|  | 
+ **transaction_id** | **str**|  | 
 
 ### Return type
 
@@ -190,8 +191,54 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **get_ihcreate_by_state_ihcreate_find_by_state_post**
+> list[IHCreate] get_ihcreate_by_state_ihcreate_find_by_state_post(state)
+
+Get Ihcreate By State
+
+### Example
+```python
+from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.IHNotificationsApi()
+state = 'state_example' # str | 
+
+try:
+    # Get Ihcreate By State
+    api_response = api_instance.get_ihcreate_by_state_ihcreate_find_by_state_post(state)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling IHNotificationsApi->get_ihcreate_by_state_ihcreate_find_by_state_post: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **state** | **str**|  | 
+
+### Return type
+
+[**list[IHCreate]**](IHCreate.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **get_ihcreate_ihcreate_get**
-> object get_ihcreate_ihcreate_get()
+> list[IHCreate] get_ihcreate_ihcreate_get()
 
 get ihcreate
 
@@ -221,7 +268,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**object**
+[**list[IHCreate]**](IHCreate.md)
 
 ### Authorization
 
