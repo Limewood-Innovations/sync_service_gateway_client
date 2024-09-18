@@ -28,12 +28,12 @@ class IHClose(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'jira_ticket_number': 'str',
-        'notif_number': 'int',
-        'transaction_id': 'str',
-        'state': 'str',
-        'creation_date': 'datetime',
-        'last_updated': 'datetime'
+        'jira_ticket_number': 'object',
+        'notif_number': 'object',
+        'transaction_id': 'object',
+        'state': 'object',
+        'creation_date': 'object',
+        'last_updated': 'object'
     }
 
     attribute_map = {
@@ -45,7 +45,7 @@ class IHClose(object):
         'last_updated': 'last_updated'
     }
 
-    def __init__(self, jira_ticket_number=None, notif_number=None, transaction_id='99f479f6-524d-4372-b550-98cd39ae87b8', state='initial', creation_date=None, last_updated=None):  # noqa: E501
+    def __init__(self, jira_ticket_number=None, notif_number=None, transaction_id=None, state=None, creation_date=None, last_updated=None):  # noqa: E501
         """IHClose - a model defined in Swagger"""  # noqa: E501
         self._jira_ticket_number = None
         self._notif_number = None
@@ -71,7 +71,7 @@ class IHClose(object):
 
 
         :return: The jira_ticket_number of this IHClose.  # noqa: E501
-        :rtype: str
+        :rtype: object
         """
         return self._jira_ticket_number
 
@@ -81,7 +81,7 @@ class IHClose(object):
 
 
         :param jira_ticket_number: The jira_ticket_number of this IHClose.  # noqa: E501
-        :type: str
+        :type: object
         """
         if jira_ticket_number is None:
             raise ValueError("Invalid value for `jira_ticket_number`, must not be `None`")  # noqa: E501
@@ -94,7 +94,7 @@ class IHClose(object):
 
 
         :return: The notif_number of this IHClose.  # noqa: E501
-        :rtype: int
+        :rtype: object
         """
         return self._notif_number
 
@@ -104,7 +104,7 @@ class IHClose(object):
 
 
         :param notif_number: The notif_number of this IHClose.  # noqa: E501
-        :type: int
+        :type: object
         """
         if notif_number is None:
             raise ValueError("Invalid value for `notif_number`, must not be `None`")  # noqa: E501
@@ -117,7 +117,7 @@ class IHClose(object):
 
 
         :return: The transaction_id of this IHClose.  # noqa: E501
-        :rtype: str
+        :rtype: object
         """
         return self._transaction_id
 
@@ -127,7 +127,7 @@ class IHClose(object):
 
 
         :param transaction_id: The transaction_id of this IHClose.  # noqa: E501
-        :type: str
+        :type: object
         """
 
         self._transaction_id = transaction_id
@@ -138,7 +138,7 @@ class IHClose(object):
 
 
         :return: The state of this IHClose.  # noqa: E501
-        :rtype: str
+        :rtype: object
         """
         return self._state
 
@@ -148,7 +148,7 @@ class IHClose(object):
 
 
         :param state: The state of this IHClose.  # noqa: E501
-        :type: str
+        :type: object
         """
 
         self._state = state
@@ -159,7 +159,7 @@ class IHClose(object):
 
 
         :return: The creation_date of this IHClose.  # noqa: E501
-        :rtype: datetime
+        :rtype: object
         """
         return self._creation_date
 
@@ -169,7 +169,7 @@ class IHClose(object):
 
 
         :param creation_date: The creation_date of this IHClose.  # noqa: E501
-        :type: datetime
+        :type: object
         """
 
         self._creation_date = creation_date
@@ -180,7 +180,7 @@ class IHClose(object):
 
 
         :return: The last_updated of this IHClose.  # noqa: E501
-        :rtype: datetime
+        :rtype: object
         """
         return self._last_updated
 
@@ -190,7 +190,7 @@ class IHClose(object):
 
 
         :param last_updated: The last_updated of this IHClose.  # noqa: E501
-        :type: datetime
+        :type: object
         """
 
         self._last_updated = last_updated

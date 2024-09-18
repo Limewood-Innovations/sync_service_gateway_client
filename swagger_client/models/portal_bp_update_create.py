@@ -28,20 +28,20 @@ class PortalBPUpdateCreate(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'bpnr': 'str',
-        'mail': 'str',
-        'mail_change': 'int',
-        'mobile': 'str',
-        'mobile_change': 'int',
-        'iban': 'str',
-        'iban_change': 'int',
-        'datenschutz': 'str',
-        'datenschutz_change': 'int',
-        'post': 'str',
-        'post_change': 'int',
-        'anmeldeid': 'str',
-        'anmeldeid_change': 'int',
-        'change_timestamp': 'datetime'
+        'bpnr': 'object',
+        'mail': 'object',
+        'mail_change': 'object',
+        'mobile': 'object',
+        'mobile_change': 'object',
+        'iban': 'object',
+        'iban_change': 'object',
+        'datenschutz': 'object',
+        'datenschutz_change': 'object',
+        'post': 'object',
+        'post_change': 'object',
+        'anmeldeid': 'object',
+        'anmeldeid_change': 'object',
+        'change_timestamp': 'object'
     }
 
     attribute_map = {
@@ -99,7 +99,7 @@ class PortalBPUpdateCreate(object):
 
 
         :return: The bpnr of this PortalBPUpdateCreate.  # noqa: E501
-        :rtype: str
+        :rtype: object
         """
         return self._bpnr
 
@@ -109,7 +109,7 @@ class PortalBPUpdateCreate(object):
 
 
         :param bpnr: The bpnr of this PortalBPUpdateCreate.  # noqa: E501
-        :type: str
+        :type: object
         """
         if bpnr is None:
             raise ValueError("Invalid value for `bpnr`, must not be `None`")  # noqa: E501
@@ -122,7 +122,7 @@ class PortalBPUpdateCreate(object):
 
 
         :return: The mail of this PortalBPUpdateCreate.  # noqa: E501
-        :rtype: str
+        :rtype: object
         """
         return self._mail
 
@@ -132,7 +132,7 @@ class PortalBPUpdateCreate(object):
 
 
         :param mail: The mail of this PortalBPUpdateCreate.  # noqa: E501
-        :type: str
+        :type: object
         """
         if mail is None:
             raise ValueError("Invalid value for `mail`, must not be `None`")  # noqa: E501
@@ -145,7 +145,7 @@ class PortalBPUpdateCreate(object):
 
 
         :return: The mail_change of this PortalBPUpdateCreate.  # noqa: E501
-        :rtype: int
+        :rtype: object
         """
         return self._mail_change
 
@@ -155,7 +155,7 @@ class PortalBPUpdateCreate(object):
 
 
         :param mail_change: The mail_change of this PortalBPUpdateCreate.  # noqa: E501
-        :type: int
+        :type: object
         """
         if mail_change is None:
             raise ValueError("Invalid value for `mail_change`, must not be `None`")  # noqa: E501
@@ -168,7 +168,7 @@ class PortalBPUpdateCreate(object):
 
 
         :return: The mobile of this PortalBPUpdateCreate.  # noqa: E501
-        :rtype: str
+        :rtype: object
         """
         return self._mobile
 
@@ -178,7 +178,7 @@ class PortalBPUpdateCreate(object):
 
 
         :param mobile: The mobile of this PortalBPUpdateCreate.  # noqa: E501
-        :type: str
+        :type: object
         """
         if mobile is None:
             raise ValueError("Invalid value for `mobile`, must not be `None`")  # noqa: E501
@@ -191,7 +191,7 @@ class PortalBPUpdateCreate(object):
 
 
         :return: The mobile_change of this PortalBPUpdateCreate.  # noqa: E501
-        :rtype: int
+        :rtype: object
         """
         return self._mobile_change
 
@@ -201,7 +201,7 @@ class PortalBPUpdateCreate(object):
 
 
         :param mobile_change: The mobile_change of this PortalBPUpdateCreate.  # noqa: E501
-        :type: int
+        :type: object
         """
         if mobile_change is None:
             raise ValueError("Invalid value for `mobile_change`, must not be `None`")  # noqa: E501
@@ -214,7 +214,7 @@ class PortalBPUpdateCreate(object):
 
 
         :return: The iban of this PortalBPUpdateCreate.  # noqa: E501
-        :rtype: str
+        :rtype: object
         """
         return self._iban
 
@@ -224,7 +224,7 @@ class PortalBPUpdateCreate(object):
 
 
         :param iban: The iban of this PortalBPUpdateCreate.  # noqa: E501
-        :type: str
+        :type: object
         """
         if iban is None:
             raise ValueError("Invalid value for `iban`, must not be `None`")  # noqa: E501
@@ -237,7 +237,7 @@ class PortalBPUpdateCreate(object):
 
 
         :return: The iban_change of this PortalBPUpdateCreate.  # noqa: E501
-        :rtype: int
+        :rtype: object
         """
         return self._iban_change
 
@@ -247,7 +247,7 @@ class PortalBPUpdateCreate(object):
 
 
         :param iban_change: The iban_change of this PortalBPUpdateCreate.  # noqa: E501
-        :type: int
+        :type: object
         """
         if iban_change is None:
             raise ValueError("Invalid value for `iban_change`, must not be `None`")  # noqa: E501
@@ -260,7 +260,7 @@ class PortalBPUpdateCreate(object):
 
 
         :return: The datenschutz of this PortalBPUpdateCreate.  # noqa: E501
-        :rtype: str
+        :rtype: object
         """
         return self._datenschutz
 
@@ -270,7 +270,7 @@ class PortalBPUpdateCreate(object):
 
 
         :param datenschutz: The datenschutz of this PortalBPUpdateCreate.  # noqa: E501
-        :type: str
+        :type: object
         """
         if datenschutz is None:
             raise ValueError("Invalid value for `datenschutz`, must not be `None`")  # noqa: E501
@@ -283,7 +283,7 @@ class PortalBPUpdateCreate(object):
 
 
         :return: The datenschutz_change of this PortalBPUpdateCreate.  # noqa: E501
-        :rtype: int
+        :rtype: object
         """
         return self._datenschutz_change
 
@@ -293,7 +293,7 @@ class PortalBPUpdateCreate(object):
 
 
         :param datenschutz_change: The datenschutz_change of this PortalBPUpdateCreate.  # noqa: E501
-        :type: int
+        :type: object
         """
         if datenschutz_change is None:
             raise ValueError("Invalid value for `datenschutz_change`, must not be `None`")  # noqa: E501
@@ -306,7 +306,7 @@ class PortalBPUpdateCreate(object):
 
 
         :return: The post of this PortalBPUpdateCreate.  # noqa: E501
-        :rtype: str
+        :rtype: object
         """
         return self._post
 
@@ -316,7 +316,7 @@ class PortalBPUpdateCreate(object):
 
 
         :param post: The post of this PortalBPUpdateCreate.  # noqa: E501
-        :type: str
+        :type: object
         """
         if post is None:
             raise ValueError("Invalid value for `post`, must not be `None`")  # noqa: E501
@@ -329,7 +329,7 @@ class PortalBPUpdateCreate(object):
 
 
         :return: The post_change of this PortalBPUpdateCreate.  # noqa: E501
-        :rtype: int
+        :rtype: object
         """
         return self._post_change
 
@@ -339,7 +339,7 @@ class PortalBPUpdateCreate(object):
 
 
         :param post_change: The post_change of this PortalBPUpdateCreate.  # noqa: E501
-        :type: int
+        :type: object
         """
         if post_change is None:
             raise ValueError("Invalid value for `post_change`, must not be `None`")  # noqa: E501
@@ -352,7 +352,7 @@ class PortalBPUpdateCreate(object):
 
 
         :return: The anmeldeid of this PortalBPUpdateCreate.  # noqa: E501
-        :rtype: str
+        :rtype: object
         """
         return self._anmeldeid
 
@@ -362,7 +362,7 @@ class PortalBPUpdateCreate(object):
 
 
         :param anmeldeid: The anmeldeid of this PortalBPUpdateCreate.  # noqa: E501
-        :type: str
+        :type: object
         """
         if anmeldeid is None:
             raise ValueError("Invalid value for `anmeldeid`, must not be `None`")  # noqa: E501
@@ -375,7 +375,7 @@ class PortalBPUpdateCreate(object):
 
 
         :return: The anmeldeid_change of this PortalBPUpdateCreate.  # noqa: E501
-        :rtype: int
+        :rtype: object
         """
         return self._anmeldeid_change
 
@@ -385,7 +385,7 @@ class PortalBPUpdateCreate(object):
 
 
         :param anmeldeid_change: The anmeldeid_change of this PortalBPUpdateCreate.  # noqa: E501
-        :type: int
+        :type: object
         """
         if anmeldeid_change is None:
             raise ValueError("Invalid value for `anmeldeid_change`, must not be `None`")  # noqa: E501
@@ -398,7 +398,7 @@ class PortalBPUpdateCreate(object):
 
 
         :return: The change_timestamp of this PortalBPUpdateCreate.  # noqa: E501
-        :rtype: datetime
+        :rtype: object
         """
         return self._change_timestamp
 
@@ -408,7 +408,7 @@ class PortalBPUpdateCreate(object):
 
 
         :param change_timestamp: The change_timestamp of this PortalBPUpdateCreate.  # noqa: E501
-        :type: datetime
+        :type: object
         """
         if change_timestamp is None:
             raise ValueError("Invalid value for `change_timestamp`, must not be `None`")  # noqa: E501

@@ -3,9 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**bukrs** | **int** |  | 
-**customer_number** | **int** |  | 
-**dunning_block_reason** | **str** |  | 
+**bukrs** | **object** |  | 
+**customer_number** | **object** |  | 
+**dunning_block_reason** | **object** |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -54,7 +54,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_kontoauszug_kontoauszug_get**
-> list[Kontoauszug] get_kontoauszug_kontoauszug_get()
+> object get_kontoauszug_kontoauszug_get()
 
 Get Kontoauszug
 
@@ -82,7 +82,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**list[Kontoauszug]**](Kontoauszug.md)
+**object**
 
 ### Authorization
 

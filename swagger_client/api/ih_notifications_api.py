@@ -235,7 +235,7 @@ class IHNotificationsApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :return: list[IHClose]
+        :return: object
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -255,7 +255,7 @@ class IHNotificationsApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :return: list[IHClose]
+        :return: object
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -303,7 +303,7 @@ class IHNotificationsApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='list[IHClose]',  # noqa: E501
+            response_type='object',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -320,7 +320,7 @@ class IHNotificationsApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str transaction_id: (required)
+        :param object transaction_id: (required)
         :return: IHCreate
                  If the method is called asynchronously,
                  returns the request thread.
@@ -341,7 +341,7 @@ class IHNotificationsApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str transaction_id: (required)
+        :param object transaction_id: (required)
         :return: IHCreate
                  If the method is called asynchronously,
                  returns the request thread.
@@ -413,8 +413,8 @@ class IHNotificationsApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str state: (required)
-        :return: list[IHCreate]
+        :param object state: (required)
+        :return: object
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -434,8 +434,8 @@ class IHNotificationsApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str state: (required)
-        :return: list[IHCreate]
+        :param object state: (required)
+        :return: object
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -489,7 +489,7 @@ class IHNotificationsApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='list[IHCreate]',  # noqa: E501
+            response_type='object',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -507,7 +507,7 @@ class IHNotificationsApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :return: list[IHCreate]
+        :return: object
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -528,7 +528,7 @@ class IHNotificationsApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :return: list[IHCreate]
+        :return: object
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -576,7 +576,7 @@ class IHNotificationsApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='list[IHCreate]',  # noqa: E501
+            response_type='object',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),

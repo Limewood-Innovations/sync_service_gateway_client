@@ -28,18 +28,18 @@ class IHCreateCreate(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'jira_ticket_number': 'str',
-        'notif_type': 'str',
-        'short_text': 'str',
-        'long_text': 'str',
-        'func_loc': 'str',
-        'reported_by': 'str',
-        'notif_date': 'datetime',
-        'plan_group': 'str',
-        'partner_number': 'str',
-        'plan_plant': 'str',
-        'partner_role': 'str',
-        'set_active': 'bool'
+        'jira_ticket_number': 'object',
+        'notif_type': 'object',
+        'short_text': 'object',
+        'long_text': 'object',
+        'func_loc': 'object',
+        'reported_by': 'object',
+        'notif_date': 'object',
+        'plan_group': 'object',
+        'partner_number': 'object',
+        'plan_plant': 'object',
+        'partner_role': 'object',
+        'set_active': 'object'
     }
 
     attribute_map = {
@@ -91,7 +91,7 @@ class IHCreateCreate(object):
 
 
         :return: The jira_ticket_number of this IHCreateCreate.  # noqa: E501
-        :rtype: str
+        :rtype: object
         """
         return self._jira_ticket_number
 
@@ -101,7 +101,7 @@ class IHCreateCreate(object):
 
 
         :param jira_ticket_number: The jira_ticket_number of this IHCreateCreate.  # noqa: E501
-        :type: str
+        :type: object
         """
         if jira_ticket_number is None:
             raise ValueError("Invalid value for `jira_ticket_number`, must not be `None`")  # noqa: E501
@@ -114,7 +114,7 @@ class IHCreateCreate(object):
 
 
         :return: The notif_type of this IHCreateCreate.  # noqa: E501
-        :rtype: str
+        :rtype: object
         """
         return self._notif_type
 
@@ -124,7 +124,7 @@ class IHCreateCreate(object):
 
 
         :param notif_type: The notif_type of this IHCreateCreate.  # noqa: E501
-        :type: str
+        :type: object
         """
         if notif_type is None:
             raise ValueError("Invalid value for `notif_type`, must not be `None`")  # noqa: E501
@@ -137,7 +137,7 @@ class IHCreateCreate(object):
 
 
         :return: The short_text of this IHCreateCreate.  # noqa: E501
-        :rtype: str
+        :rtype: object
         """
         return self._short_text
 
@@ -147,7 +147,7 @@ class IHCreateCreate(object):
 
 
         :param short_text: The short_text of this IHCreateCreate.  # noqa: E501
-        :type: str
+        :type: object
         """
         if short_text is None:
             raise ValueError("Invalid value for `short_text`, must not be `None`")  # noqa: E501
@@ -160,7 +160,7 @@ class IHCreateCreate(object):
 
 
         :return: The long_text of this IHCreateCreate.  # noqa: E501
-        :rtype: str
+        :rtype: object
         """
         return self._long_text
 
@@ -170,7 +170,7 @@ class IHCreateCreate(object):
 
 
         :param long_text: The long_text of this IHCreateCreate.  # noqa: E501
-        :type: str
+        :type: object
         """
         if long_text is None:
             raise ValueError("Invalid value for `long_text`, must not be `None`")  # noqa: E501
@@ -183,7 +183,7 @@ class IHCreateCreate(object):
 
 
         :return: The func_loc of this IHCreateCreate.  # noqa: E501
-        :rtype: str
+        :rtype: object
         """
         return self._func_loc
 
@@ -193,7 +193,7 @@ class IHCreateCreate(object):
 
 
         :param func_loc: The func_loc of this IHCreateCreate.  # noqa: E501
-        :type: str
+        :type: object
         """
         if func_loc is None:
             raise ValueError("Invalid value for `func_loc`, must not be `None`")  # noqa: E501
@@ -206,7 +206,7 @@ class IHCreateCreate(object):
 
 
         :return: The reported_by of this IHCreateCreate.  # noqa: E501
-        :rtype: str
+        :rtype: object
         """
         return self._reported_by
 
@@ -216,7 +216,7 @@ class IHCreateCreate(object):
 
 
         :param reported_by: The reported_by of this IHCreateCreate.  # noqa: E501
-        :type: str
+        :type: object
         """
         if reported_by is None:
             raise ValueError("Invalid value for `reported_by`, must not be `None`")  # noqa: E501
@@ -229,7 +229,7 @@ class IHCreateCreate(object):
 
 
         :return: The notif_date of this IHCreateCreate.  # noqa: E501
-        :rtype: datetime
+        :rtype: object
         """
         return self._notif_date
 
@@ -239,7 +239,7 @@ class IHCreateCreate(object):
 
 
         :param notif_date: The notif_date of this IHCreateCreate.  # noqa: E501
-        :type: datetime
+        :type: object
         """
         if notif_date is None:
             raise ValueError("Invalid value for `notif_date`, must not be `None`")  # noqa: E501
@@ -252,7 +252,7 @@ class IHCreateCreate(object):
 
 
         :return: The plan_group of this IHCreateCreate.  # noqa: E501
-        :rtype: str
+        :rtype: object
         """
         return self._plan_group
 
@@ -262,7 +262,7 @@ class IHCreateCreate(object):
 
 
         :param plan_group: The plan_group of this IHCreateCreate.  # noqa: E501
-        :type: str
+        :type: object
         """
         if plan_group is None:
             raise ValueError("Invalid value for `plan_group`, must not be `None`")  # noqa: E501
@@ -275,7 +275,7 @@ class IHCreateCreate(object):
 
 
         :return: The partner_number of this IHCreateCreate.  # noqa: E501
-        :rtype: str
+        :rtype: object
         """
         return self._partner_number
 
@@ -285,7 +285,7 @@ class IHCreateCreate(object):
 
 
         :param partner_number: The partner_number of this IHCreateCreate.  # noqa: E501
-        :type: str
+        :type: object
         """
         if partner_number is None:
             raise ValueError("Invalid value for `partner_number`, must not be `None`")  # noqa: E501
@@ -298,7 +298,7 @@ class IHCreateCreate(object):
 
 
         :return: The plan_plant of this IHCreateCreate.  # noqa: E501
-        :rtype: str
+        :rtype: object
         """
         return self._plan_plant
 
@@ -308,7 +308,7 @@ class IHCreateCreate(object):
 
 
         :param plan_plant: The plan_plant of this IHCreateCreate.  # noqa: E501
-        :type: str
+        :type: object
         """
         if plan_plant is None:
             raise ValueError("Invalid value for `plan_plant`, must not be `None`")  # noqa: E501
@@ -321,7 +321,7 @@ class IHCreateCreate(object):
 
 
         :return: The partner_role of this IHCreateCreate.  # noqa: E501
-        :rtype: str
+        :rtype: object
         """
         return self._partner_role
 
@@ -331,7 +331,7 @@ class IHCreateCreate(object):
 
 
         :param partner_role: The partner_role of this IHCreateCreate.  # noqa: E501
-        :type: str
+        :type: object
         """
         if partner_role is None:
             raise ValueError("Invalid value for `partner_role`, must not be `None`")  # noqa: E501
@@ -344,7 +344,7 @@ class IHCreateCreate(object):
 
 
         :return: The set_active of this IHCreateCreate.  # noqa: E501
-        :rtype: bool
+        :rtype: object
         """
         return self._set_active
 
@@ -354,7 +354,7 @@ class IHCreateCreate(object):
 
 
         :param set_active: The set_active of this IHCreateCreate.  # noqa: E501
-        :type: bool
+        :type: object
         """
         if set_active is None:
             raise ValueError("Invalid value for `set_active`, must not be `None`")  # noqa: E501

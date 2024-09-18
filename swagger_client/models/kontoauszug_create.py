@@ -28,12 +28,12 @@ class KontoauszugCreate(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'bukrs': 'int',
-        'customer_number': 'int',
-        'contract_number': 'str',
-        '_date': 'date',
-        'jira_ticket_number': 'str',
-        'mode': 'str'
+        'bukrs': 'object',
+        'customer_number': 'object',
+        'contract_number': 'object',
+        '_date': 'object',
+        'jira_ticket_number': 'object',
+        'mode': 'object'
     }
 
     attribute_map = {
@@ -67,7 +67,7 @@ class KontoauszugCreate(object):
 
 
         :return: The bukrs of this KontoauszugCreate.  # noqa: E501
-        :rtype: int
+        :rtype: object
         """
         return self._bukrs
 
@@ -77,7 +77,7 @@ class KontoauszugCreate(object):
 
 
         :param bukrs: The bukrs of this KontoauszugCreate.  # noqa: E501
-        :type: int
+        :type: object
         """
         if bukrs is None:
             raise ValueError("Invalid value for `bukrs`, must not be `None`")  # noqa: E501
@@ -90,7 +90,7 @@ class KontoauszugCreate(object):
 
 
         :return: The customer_number of this KontoauszugCreate.  # noqa: E501
-        :rtype: int
+        :rtype: object
         """
         return self._customer_number
 
@@ -100,7 +100,7 @@ class KontoauszugCreate(object):
 
 
         :param customer_number: The customer_number of this KontoauszugCreate.  # noqa: E501
-        :type: int
+        :type: object
         """
         if customer_number is None:
             raise ValueError("Invalid value for `customer_number`, must not be `None`")  # noqa: E501
@@ -113,7 +113,7 @@ class KontoauszugCreate(object):
 
 
         :return: The contract_number of this KontoauszugCreate.  # noqa: E501
-        :rtype: str
+        :rtype: object
         """
         return self._contract_number
 
@@ -123,7 +123,7 @@ class KontoauszugCreate(object):
 
 
         :param contract_number: The contract_number of this KontoauszugCreate.  # noqa: E501
-        :type: str
+        :type: object
         """
         if contract_number is None:
             raise ValueError("Invalid value for `contract_number`, must not be `None`")  # noqa: E501
@@ -136,7 +136,7 @@ class KontoauszugCreate(object):
 
 
         :return: The _date of this KontoauszugCreate.  # noqa: E501
-        :rtype: date
+        :rtype: object
         """
         return self.__date
 
@@ -146,7 +146,7 @@ class KontoauszugCreate(object):
 
 
         :param _date: The _date of this KontoauszugCreate.  # noqa: E501
-        :type: date
+        :type: object
         """
         if _date is None:
             raise ValueError("Invalid value for `_date`, must not be `None`")  # noqa: E501
@@ -159,7 +159,7 @@ class KontoauszugCreate(object):
 
 
         :return: The jira_ticket_number of this KontoauszugCreate.  # noqa: E501
-        :rtype: str
+        :rtype: object
         """
         return self._jira_ticket_number
 
@@ -169,7 +169,7 @@ class KontoauszugCreate(object):
 
 
         :param jira_ticket_number: The jira_ticket_number of this KontoauszugCreate.  # noqa: E501
-        :type: str
+        :type: object
         """
         if jira_ticket_number is None:
             raise ValueError("Invalid value for `jira_ticket_number`, must not be `None`")  # noqa: E501
@@ -182,7 +182,7 @@ class KontoauszugCreate(object):
 
 
         :return: The mode of this KontoauszugCreate.  # noqa: E501
-        :rtype: str
+        :rtype: object
         """
         return self._mode
 
@@ -192,7 +192,7 @@ class KontoauszugCreate(object):
 
 
         :param mode: The mode of this KontoauszugCreate.  # noqa: E501
-        :type: str
+        :type: object
         """
         if mode is None:
             raise ValueError("Invalid value for `mode`, must not be `None`")  # noqa: E501

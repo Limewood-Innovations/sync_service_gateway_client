@@ -54,7 +54,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_portal_bp_update_portal_bp_update_get**
-> list[PortalBPUpdate] get_portal_bp_update_portal_bp_update_get()
+> object get_portal_bp_update_portal_bp_update_get()
 
 Get Portal Bp Update
 
@@ -82,7 +82,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**list[PortalBPUpdate]**](PortalBPUpdate.md)
+**object**
 
 ### Authorization
 

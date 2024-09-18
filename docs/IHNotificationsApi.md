@@ -104,7 +104,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_ihclose_ihclose_get**
-> list[IHClose] get_ihclose_ihclose_get()
+> object get_ihclose_ihclose_get()
 
 Get Ihclose
 
@@ -132,7 +132,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**list[IHClose]**](IHClose.md)
+**object**
 
 ### Authorization
 
@@ -160,7 +160,7 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = swagger_client.IHNotificationsApi()
-transaction_id = 'transaction_id_example' # str | 
+transaction_id = NULL # object | 
 
 try:
     # Get Ihcreate By Id
@@ -174,7 +174,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **transaction_id** | **str**|  | 
+ **transaction_id** | [**object**](.md)|  | 
 
 ### Return type
 
@@ -192,7 +192,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_ihcreate_by_state_ihcreate_find_by_state_post**
-> list[IHCreate] get_ihcreate_by_state_ihcreate_find_by_state_post(state)
+> object get_ihcreate_by_state_ihcreate_find_by_state_post(state)
 
 Get Ihcreate By State
 
@@ -206,7 +206,7 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = swagger_client.IHNotificationsApi()
-state = 'state_example' # str | 
+state = NULL # object | 
 
 try:
     # Get Ihcreate By State
@@ -220,11 +220,11 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **state** | **str**|  | 
+ **state** | [**object**](.md)|  | 
 
 ### Return type
 
-[**list[IHCreate]**](IHCreate.md)
+**object**
 
 ### Authorization
 
@@ -238,7 +238,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_ihcreate_ihcreate_get**
-> list[IHCreate] get_ihcreate_ihcreate_get()
+> object get_ihcreate_ihcreate_get()
 
 get ihcreate
 
@@ -268,7 +268,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**list[IHCreate]**](IHCreate.md)
+**object**
 
 ### Authorization
 

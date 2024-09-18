@@ -96,6 +96,17 @@ except ApiException as e:
 
 # create an instance of the API class
 api_instance = swagger_client.IHNotificationsApi(swagger_client.ApiClient(configuration))
+state = NULL # object | 
+
+try:
+    # Get Ihcreate By State
+    api_response = api_instance.get_ihcreate_by_state_ihcreate_find_by_state_post(state)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling IHNotificationsApi->get_ihcreate_by_state_ihcreate_find_by_state_post: %s\n" % e)
+
+# create an instance of the API class
+api_instance = swagger_client.IHNotificationsApi(swagger_client.ApiClient(configuration))
 
 try:
     # get ihcreate
@@ -115,6 +126,7 @@ Class | Method | HTTP request | Description
 *IHNotificationsApi* | [**add_ihcreate_ihcreate_post**](docs/IHNotificationsApi.md#add_ihcreate_ihcreate_post) | **POST** /ihcreate | Add Ihcreate
 *IHNotificationsApi* | [**get_ihclose_ihclose_get**](docs/IHNotificationsApi.md#get_ihclose_ihclose_get) | **GET** /ihclose | Get Ihclose
 *IHNotificationsApi* | [**get_ihcreate_by_id_ihcreate_transaction_id_get**](docs/IHNotificationsApi.md#get_ihcreate_by_id_ihcreate_transaction_id_get) | **GET** /ihcreate/{transaction_id} | Get Ihcreate By Id
+*IHNotificationsApi* | [**get_ihcreate_by_state_ihcreate_find_by_state_post**](docs/IHNotificationsApi.md#get_ihcreate_by_state_ihcreate_find_by_state_post) | **POST** /ihcreate/findByState | Get Ihcreate By State
 *IHNotificationsApi* | [**get_ihcreate_ihcreate_get**](docs/IHNotificationsApi.md#get_ihcreate_ihcreate_get) | **GET** /ihcreate | get ihcreate
 *KontoauszugApi* | [**add_kontoauszug_kontoauszug_post**](docs/KontoauszugApi.md#add_kontoauszug_kontoauszug_post) | **POST** /kontoauszug | Add Kontoauszug
 *KontoauszugApi* | [**get_kontoauszug_kontoauszug_get**](docs/KontoauszugApi.md#get_kontoauszug_kontoauszug_get) | **GET** /kontoauszug | Get Kontoauszug

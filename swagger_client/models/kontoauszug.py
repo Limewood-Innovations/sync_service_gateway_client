@@ -28,15 +28,15 @@ class Kontoauszug(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'bukrs': 'int',
-        'customer_number': 'int',
-        'contract_number': 'str',
-        '_date': 'date',
-        'jira_ticket_number': 'str',
-        'mode': 'str',
-        'transaction_id': 'str',
-        'state': 'str',
-        'creation_date': 'datetime'
+        'bukrs': 'object',
+        'customer_number': 'object',
+        'contract_number': 'object',
+        '_date': 'object',
+        'jira_ticket_number': 'object',
+        'mode': 'object',
+        'transaction_id': 'object',
+        'state': 'object',
+        'creation_date': 'object'
     }
 
     attribute_map = {
@@ -51,7 +51,7 @@ class Kontoauszug(object):
         'creation_date': 'creation_date'
     }
 
-    def __init__(self, bukrs=None, customer_number=None, contract_number=None, _date=None, jira_ticket_number=None, mode=None, transaction_id='2732ab49-0c0d-4040-a97f-3b46ad7df02f', state='initial', creation_date=None):  # noqa: E501
+    def __init__(self, bukrs=None, customer_number=None, contract_number=None, _date=None, jira_ticket_number=None, mode=None, transaction_id=None, state=None, creation_date=None):  # noqa: E501
         """Kontoauszug - a model defined in Swagger"""  # noqa: E501
         self._bukrs = None
         self._customer_number = None
@@ -82,7 +82,7 @@ class Kontoauszug(object):
 
 
         :return: The bukrs of this Kontoauszug.  # noqa: E501
-        :rtype: int
+        :rtype: object
         """
         return self._bukrs
 
@@ -92,7 +92,7 @@ class Kontoauszug(object):
 
 
         :param bukrs: The bukrs of this Kontoauszug.  # noqa: E501
-        :type: int
+        :type: object
         """
         if bukrs is None:
             raise ValueError("Invalid value for `bukrs`, must not be `None`")  # noqa: E501
@@ -105,7 +105,7 @@ class Kontoauszug(object):
 
 
         :return: The customer_number of this Kontoauszug.  # noqa: E501
-        :rtype: int
+        :rtype: object
         """
         return self._customer_number
 
@@ -115,7 +115,7 @@ class Kontoauszug(object):
 
 
         :param customer_number: The customer_number of this Kontoauszug.  # noqa: E501
-        :type: int
+        :type: object
         """
         if customer_number is None:
             raise ValueError("Invalid value for `customer_number`, must not be `None`")  # noqa: E501
@@ -128,7 +128,7 @@ class Kontoauszug(object):
 
 
         :return: The contract_number of this Kontoauszug.  # noqa: E501
-        :rtype: str
+        :rtype: object
         """
         return self._contract_number
 
@@ -138,7 +138,7 @@ class Kontoauszug(object):
 
 
         :param contract_number: The contract_number of this Kontoauszug.  # noqa: E501
-        :type: str
+        :type: object
         """
         if contract_number is None:
             raise ValueError("Invalid value for `contract_number`, must not be `None`")  # noqa: E501
@@ -151,7 +151,7 @@ class Kontoauszug(object):
 
 
         :return: The _date of this Kontoauszug.  # noqa: E501
-        :rtype: date
+        :rtype: object
         """
         return self.__date
 
@@ -161,7 +161,7 @@ class Kontoauszug(object):
 
 
         :param _date: The _date of this Kontoauszug.  # noqa: E501
-        :type: date
+        :type: object
         """
         if _date is None:
             raise ValueError("Invalid value for `_date`, must not be `None`")  # noqa: E501
@@ -174,7 +174,7 @@ class Kontoauszug(object):
 
 
         :return: The jira_ticket_number of this Kontoauszug.  # noqa: E501
-        :rtype: str
+        :rtype: object
         """
         return self._jira_ticket_number
 
@@ -184,7 +184,7 @@ class Kontoauszug(object):
 
 
         :param jira_ticket_number: The jira_ticket_number of this Kontoauszug.  # noqa: E501
-        :type: str
+        :type: object
         """
         if jira_ticket_number is None:
             raise ValueError("Invalid value for `jira_ticket_number`, must not be `None`")  # noqa: E501
@@ -197,7 +197,7 @@ class Kontoauszug(object):
 
 
         :return: The mode of this Kontoauszug.  # noqa: E501
-        :rtype: str
+        :rtype: object
         """
         return self._mode
 
@@ -207,7 +207,7 @@ class Kontoauszug(object):
 
 
         :param mode: The mode of this Kontoauszug.  # noqa: E501
-        :type: str
+        :type: object
         """
         if mode is None:
             raise ValueError("Invalid value for `mode`, must not be `None`")  # noqa: E501
@@ -220,7 +220,7 @@ class Kontoauszug(object):
 
 
         :return: The transaction_id of this Kontoauszug.  # noqa: E501
-        :rtype: str
+        :rtype: object
         """
         return self._transaction_id
 
@@ -230,7 +230,7 @@ class Kontoauszug(object):
 
 
         :param transaction_id: The transaction_id of this Kontoauszug.  # noqa: E501
-        :type: str
+        :type: object
         """
 
         self._transaction_id = transaction_id
@@ -241,7 +241,7 @@ class Kontoauszug(object):
 
 
         :return: The state of this Kontoauszug.  # noqa: E501
-        :rtype: str
+        :rtype: object
         """
         return self._state
 
@@ -251,7 +251,7 @@ class Kontoauszug(object):
 
 
         :param state: The state of this Kontoauszug.  # noqa: E501
-        :type: str
+        :type: object
         """
 
         self._state = state
@@ -262,7 +262,7 @@ class Kontoauszug(object):
 
 
         :return: The creation_date of this Kontoauszug.  # noqa: E501
-        :rtype: datetime
+        :rtype: object
         """
         return self._creation_date
 
@@ -272,7 +272,7 @@ class Kontoauszug(object):
 
 
         :param creation_date: The creation_date of this Kontoauszug.  # noqa: E501
-        :type: datetime
+        :type: object
         """
 
         self._creation_date = creation_date

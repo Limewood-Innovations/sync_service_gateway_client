@@ -28,8 +28,8 @@ class IHCloseCreate(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'jira_ticket_number': 'str',
-        'notif_number': 'int'
+        'jira_ticket_number': 'object',
+        'notif_number': 'object'
     }
 
     attribute_map = {
@@ -51,7 +51,7 @@ class IHCloseCreate(object):
 
 
         :return: The jira_ticket_number of this IHCloseCreate.  # noqa: E501
-        :rtype: str
+        :rtype: object
         """
         return self._jira_ticket_number
 
@@ -61,7 +61,7 @@ class IHCloseCreate(object):
 
 
         :param jira_ticket_number: The jira_ticket_number of this IHCloseCreate.  # noqa: E501
-        :type: str
+        :type: object
         """
         if jira_ticket_number is None:
             raise ValueError("Invalid value for `jira_ticket_number`, must not be `None`")  # noqa: E501
@@ -74,7 +74,7 @@ class IHCloseCreate(object):
 
 
         :return: The notif_number of this IHCloseCreate.  # noqa: E501
-        :rtype: int
+        :rtype: object
         """
         return self._notif_number
 
@@ -84,7 +84,7 @@ class IHCloseCreate(object):
 
 
         :param notif_number: The notif_number of this IHCloseCreate.  # noqa: E501
-        :type: int
+        :type: object
         """
         if notif_number is None:
             raise ValueError("Invalid value for `notif_number`, must not be `None`")  # noqa: E501
