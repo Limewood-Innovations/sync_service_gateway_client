@@ -114,6 +114,30 @@ try:
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IHNotificationsApi->get_ihcreate_ihcreate_get: %s\n" % e)
+
+# create an instance of the API class
+api_instance = swagger_client.IHNotificationsApi(swagger_client.ApiClient(configuration))
+transaction_id = NULL # object | 
+retry_count = NULL # object | 
+
+try:
+    # Increment Ihcreate Retry Count
+    api_response = api_instance.increment_ihcreate_retry_count_ihcreate_transaction_id_retry_count_put(transaction_id, retry_count)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling IHNotificationsApi->increment_ihcreate_retry_count_ihcreate_transaction_id_retry_count_put: %s\n" % e)
+
+# create an instance of the API class
+api_instance = swagger_client.IHNotificationsApi(swagger_client.ApiClient(configuration))
+transaction_id = NULL # object | 
+state = NULL # object | 
+
+try:
+    # Update Ihcreate State
+    api_response = api_instance.update_ihcreate_state_ihcreate_transaction_id_state_put(transaction_id, state)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling IHNotificationsApi->update_ihcreate_state_ihcreate_transaction_id_state_put: %s\n" % e)
 ```
 
 ## Documentation for API Endpoints
@@ -128,6 +152,8 @@ Class | Method | HTTP request | Description
 *IHNotificationsApi* | [**get_ihcreate_by_id_ihcreate_transaction_id_get**](docs/IHNotificationsApi.md#get_ihcreate_by_id_ihcreate_transaction_id_get) | **GET** /ihcreate/{transaction_id} | Get Ihcreate By Id
 *IHNotificationsApi* | [**get_ihcreate_by_state_ihcreate_find_by_state_post**](docs/IHNotificationsApi.md#get_ihcreate_by_state_ihcreate_find_by_state_post) | **POST** /ihcreate/findByState | Get Ihcreate By State
 *IHNotificationsApi* | [**get_ihcreate_ihcreate_get**](docs/IHNotificationsApi.md#get_ihcreate_ihcreate_get) | **GET** /ihcreate | get ihcreate
+*IHNotificationsApi* | [**increment_ihcreate_retry_count_ihcreate_transaction_id_retry_count_put**](docs/IHNotificationsApi.md#increment_ihcreate_retry_count_ihcreate_transaction_id_retry_count_put) | **PUT** /ihcreate/{transaction_id}/retry_count | Increment Ihcreate Retry Count
+*IHNotificationsApi* | [**update_ihcreate_state_ihcreate_transaction_id_state_put**](docs/IHNotificationsApi.md#update_ihcreate_state_ihcreate_transaction_id_state_put) | **PUT** /ihcreate/{transaction_id}/state | Update Ihcreate State
 *KontoauszugApi* | [**add_kontoauszug_kontoauszug_post**](docs/KontoauszugApi.md#add_kontoauszug_kontoauszug_post) | **POST** /kontoauszug | Add Kontoauszug
 *KontoauszugApi* | [**get_kontoauszug_kontoauszug_get**](docs/KontoauszugApi.md#get_kontoauszug_kontoauszug_get) | **GET** /kontoauszug | Get Kontoauszug
 *MahnstufeApi* | [**add_mahnstufe_mahnstufe_post**](docs/MahnstufeApi.md#add_mahnstufe_mahnstufe_post) | **POST** /mahnstufe | Add Mahnstufe

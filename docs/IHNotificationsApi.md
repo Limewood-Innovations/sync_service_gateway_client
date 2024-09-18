@@ -10,6 +10,8 @@ Method | HTTP request | Description
 [**get_ihcreate_by_id_ihcreate_transaction_id_get**](IHNotificationsApi.md#get_ihcreate_by_id_ihcreate_transaction_id_get) | **GET** /ihcreate/{transaction_id} | Get Ihcreate By Id
 [**get_ihcreate_by_state_ihcreate_find_by_state_post**](IHNotificationsApi.md#get_ihcreate_by_state_ihcreate_find_by_state_post) | **POST** /ihcreate/findByState | Get Ihcreate By State
 [**get_ihcreate_ihcreate_get**](IHNotificationsApi.md#get_ihcreate_ihcreate_get) | **GET** /ihcreate | get ihcreate
+[**increment_ihcreate_retry_count_ihcreate_transaction_id_retry_count_put**](IHNotificationsApi.md#increment_ihcreate_retry_count_ihcreate_transaction_id_retry_count_put) | **PUT** /ihcreate/{transaction_id}/retry_count | Increment Ihcreate Retry Count
+[**update_ihcreate_state_ihcreate_transaction_id_state_put**](IHNotificationsApi.md#update_ihcreate_state_ihcreate_transaction_id_state_put) | **PUT** /ihcreate/{transaction_id}/state | Update Ihcreate State
 
 # **add_ihclose_ihclose_post**
 > ApiResponse add_ihclose_ihclose_post(body)
@@ -269,6 +271,102 @@ This endpoint does not need any parameter.
 ### Return type
 
 **object**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **increment_ihcreate_retry_count_ihcreate_transaction_id_retry_count_put**
+> ApiResponse increment_ihcreate_retry_count_ihcreate_transaction_id_retry_count_put(transaction_id, retry_count)
+
+Increment Ihcreate Retry Count
+
+### Example
+```python
+from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.IHNotificationsApi()
+transaction_id = NULL # object | 
+retry_count = NULL # object | 
+
+try:
+    # Increment Ihcreate Retry Count
+    api_response = api_instance.increment_ihcreate_retry_count_ihcreate_transaction_id_retry_count_put(transaction_id, retry_count)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling IHNotificationsApi->increment_ihcreate_retry_count_ihcreate_transaction_id_retry_count_put: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **transaction_id** | [**object**](.md)|  | 
+ **retry_count** | [**object**](.md)|  | 
+
+### Return type
+
+[**ApiResponse**](ApiResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **update_ihcreate_state_ihcreate_transaction_id_state_put**
+> ApiResponse update_ihcreate_state_ihcreate_transaction_id_state_put(transaction_id, state)
+
+Update Ihcreate State
+
+### Example
+```python
+from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.IHNotificationsApi()
+transaction_id = NULL # object | 
+state = NULL # object | 
+
+try:
+    # Update Ihcreate State
+    api_response = api_instance.update_ihcreate_state_ihcreate_transaction_id_state_put(transaction_id, state)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling IHNotificationsApi->update_ihcreate_state_ihcreate_transaction_id_state_put: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **transaction_id** | [**object**](.md)|  | 
+ **state** | [**object**](.md)|  | 
+
+### Return type
+
+[**ApiResponse**](ApiResponse.md)
 
 ### Authorization
 

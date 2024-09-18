@@ -70,6 +70,20 @@ class TestIHNotificationsApi(unittest.TestCase):
         """
         pass
 
+    def test_increment_ihcreate_retry_count_ihcreate_transaction_id_retry_count_put(self):
+        """Test case for increment_ihcreate_retry_count_ihcreate_transaction_id_retry_count_put
+
+        Increment Ihcreate Retry Count  # noqa: E501
+        """
+        pass
+
+    def test_update_ihcreate_state_ihcreate_transaction_id_state_put(self):
+        """Test case for update_ihcreate_state_ihcreate_transaction_id_state_put
+
+        Update Ihcreate State  # noqa: E501
+        """
+        pass
+
 
 if __name__ == '__main__':
     unittest.main()
