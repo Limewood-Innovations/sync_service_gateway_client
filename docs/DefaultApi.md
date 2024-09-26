@@ -1,10 +1,11 @@
-# swagger_client.DefaultApi
+# sync_service_gateway_client.DefaultApi
 
-All URIs are relative to */*
+All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**pong_ping_get**](DefaultApi.md#pong_ping_get) | **GET** /ping | Pong
+
 
 # **pong_ping_get**
 > ApiResponse pong_ping_get()
@@ -12,25 +13,39 @@ Method | HTTP request | Description
 Pong
 
 ### Example
+
+
 ```python
-from __future__ import print_function
-import time
-import swagger_client
-from swagger_client.rest import ApiException
+import sync_service_gateway_client
+from sync_service_gateway_client.models.api_response import ApiResponse
+from sync_service_gateway_client.rest import ApiException
 from pprint import pprint
 
-# create an instance of the API class
-api_instance = swagger_client.DefaultApi()
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = sync_service_gateway_client.Configuration(
+    host = "http://localhost"
+)
 
-try:
-    # Pong
-    api_response = api_instance.pong_ping_get()
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling DefaultApi->pong_ping_get: %s\n" % e)
+
+# Enter a context with an instance of the API client
+with sync_service_gateway_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = sync_service_gateway_client.DefaultApi(api_client)
+
+    try:
+        # Pong
+        api_response = api_instance.pong_ping_get()
+        print("The response of DefaultApi->pong_ping_get:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling DefaultApi->pong_ping_get: %s\n" % e)
 ```
 
+
+
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -45,6 +60,13 @@ No authorization required
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful Response |  -  |
+**404** | Not Found |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

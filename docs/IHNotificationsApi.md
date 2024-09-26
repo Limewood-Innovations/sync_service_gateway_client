@@ -1,6 +1,6 @@
-# swagger_client.IHNotificationsApi
+# sync_service_gateway_client.IHNotificationsApi
 
-All URIs are relative to */*
+All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -8,41 +8,54 @@ Method | HTTP request | Description
 [**add_ihcreate_ihcreate_post**](IHNotificationsApi.md#add_ihcreate_ihcreate_post) | **POST** /ihcreate | Add Ihcreate
 [**get_ihclose_ihclose_get**](IHNotificationsApi.md#get_ihclose_ihclose_get) | **GET** /ihclose | Get Ihclose
 [**get_ihcreate_by_id_ihcreate_transaction_id_get**](IHNotificationsApi.md#get_ihcreate_by_id_ihcreate_transaction_id_get) | **GET** /ihcreate/{transaction_id} | Get Ihcreate By Id
-[**get_ihcreate_by_state_ihcreate_find_by_state_post**](IHNotificationsApi.md#get_ihcreate_by_state_ihcreate_find_by_state_post) | **POST** /ihcreate/findByState | Get Ihcreate By State
 [**get_ihcreate_ihcreate_get**](IHNotificationsApi.md#get_ihcreate_ihcreate_get) | **GET** /ihcreate | get ihcreate
-[**increment_ihcreate_retry_count_ihcreate_transaction_id_retry_count_put**](IHNotificationsApi.md#increment_ihcreate_retry_count_ihcreate_transaction_id_retry_count_put) | **PUT** /ihcreate/{transaction_id}/retry_count | Increment Ihcreate Retry Count
-[**update_ihcreate_state_ihcreate_transaction_id_state_put**](IHNotificationsApi.md#update_ihcreate_state_ihcreate_transaction_id_state_put) | **PUT** /ihcreate/{transaction_id}/state | Update Ihcreate State
+
 
 # **add_ihclose_ihclose_post**
-> ApiResponse add_ihclose_ihclose_post(body)
+> ApiResponse add_ihclose_ihclose_post(ih_close_create)
 
 Add Ihclose
 
 ### Example
+
+
 ```python
-from __future__ import print_function
-import time
-import swagger_client
-from swagger_client.rest import ApiException
+import sync_service_gateway_client
+from sync_service_gateway_client.models.api_response import ApiResponse
+from sync_service_gateway_client.models.ih_close_create import IHCloseCreate
+from sync_service_gateway_client.rest import ApiException
 from pprint import pprint
 
-# create an instance of the API class
-api_instance = swagger_client.IHNotificationsApi()
-body = swagger_client.IHCloseCreate() # IHCloseCreate | 
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = sync_service_gateway_client.Configuration(
+    host = "http://localhost"
+)
 
-try:
-    # Add Ihclose
-    api_response = api_instance.add_ihclose_ihclose_post(body)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling IHNotificationsApi->add_ihclose_ihclose_post: %s\n" % e)
+
+# Enter a context with an instance of the API client
+with sync_service_gateway_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = sync_service_gateway_client.IHNotificationsApi(api_client)
+    ih_close_create = sync_service_gateway_client.IHCloseCreate() # IHCloseCreate | 
+
+    try:
+        # Add Ihclose
+        api_response = api_instance.add_ihclose_ihclose_post(ih_close_create)
+        print("The response of IHNotificationsApi->add_ihclose_ihclose_post:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling IHNotificationsApi->add_ihclose_ihclose_post: %s\n" % e)
 ```
+
+
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**IHCloseCreate**](IHCloseCreate.md)|  | 
+ **ih_close_create** | [**IHCloseCreate**](IHCloseCreate.md)|  | 
 
 ### Return type
 
@@ -56,39 +69,61 @@ No authorization required
 
  - **Content-Type**: application/json
  - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful Response |  -  |
+**422** | Validation Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **add_ihcreate_ihcreate_post**
-> ApiResponse add_ihcreate_ihcreate_post(body)
+> ApiResponse add_ihcreate_ihcreate_post(ih_create_create)
 
 Add Ihcreate
 
 ### Example
+
+
 ```python
-from __future__ import print_function
-import time
-import swagger_client
-from swagger_client.rest import ApiException
+import sync_service_gateway_client
+from sync_service_gateway_client.models.api_response import ApiResponse
+from sync_service_gateway_client.models.ih_create_create import IHCreateCreate
+from sync_service_gateway_client.rest import ApiException
 from pprint import pprint
 
-# create an instance of the API class
-api_instance = swagger_client.IHNotificationsApi()
-body = swagger_client.IHCreateCreate() # IHCreateCreate | 
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = sync_service_gateway_client.Configuration(
+    host = "http://localhost"
+)
 
-try:
-    # Add Ihcreate
-    api_response = api_instance.add_ihcreate_ihcreate_post(body)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling IHNotificationsApi->add_ihcreate_ihcreate_post: %s\n" % e)
+
+# Enter a context with an instance of the API client
+with sync_service_gateway_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = sync_service_gateway_client.IHNotificationsApi(api_client)
+    ih_create_create = sync_service_gateway_client.IHCreateCreate() # IHCreateCreate | 
+
+    try:
+        # Add Ihcreate
+        api_response = api_instance.add_ihcreate_ihcreate_post(ih_create_create)
+        print("The response of IHNotificationsApi->add_ihcreate_ihcreate_post:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling IHNotificationsApi->add_ihcreate_ihcreate_post: %s\n" % e)
 ```
+
+
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**IHCreateCreate**](IHCreateCreate.md)|  | 
+ **ih_create_create** | [**IHCreateCreate**](IHCreateCreate.md)|  | 
 
 ### Return type
 
@@ -103,38 +138,59 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful Response |  -  |
+**422** | Validation Error |  -  |
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_ihclose_ihclose_get**
-> object get_ihclose_ihclose_get()
+> List[IHClose] get_ihclose_ihclose_get()
 
 Get Ihclose
 
 ### Example
+
+
 ```python
-from __future__ import print_function
-import time
-import swagger_client
-from swagger_client.rest import ApiException
+import sync_service_gateway_client
+from sync_service_gateway_client.models.ih_close import IHClose
+from sync_service_gateway_client.rest import ApiException
 from pprint import pprint
 
-# create an instance of the API class
-api_instance = swagger_client.IHNotificationsApi()
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = sync_service_gateway_client.Configuration(
+    host = "http://localhost"
+)
 
-try:
-    # Get Ihclose
-    api_response = api_instance.get_ihclose_ihclose_get()
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling IHNotificationsApi->get_ihclose_ihclose_get: %s\n" % e)
+
+# Enter a context with an instance of the API client
+with sync_service_gateway_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = sync_service_gateway_client.IHNotificationsApi(api_client)
+
+    try:
+        # Get Ihclose
+        api_response = api_instance.get_ihclose_ihclose_get()
+        print("The response of IHNotificationsApi->get_ihclose_ihclose_get:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling IHNotificationsApi->get_ihclose_ihclose_get: %s\n" % e)
 ```
 
+
+
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
 
-**object**
+[**List[IHClose]**](IHClose.md)
 
 ### Authorization
 
@@ -145,6 +201,12 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful Response |  -  |
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_ihcreate_by_id_ihcreate_transaction_id_get**
@@ -153,30 +215,44 @@ No authorization required
 Get Ihcreate By Id
 
 ### Example
+
+
 ```python
-from __future__ import print_function
-import time
-import swagger_client
-from swagger_client.rest import ApiException
+import sync_service_gateway_client
+from sync_service_gateway_client.models.ih_create import IHCreate
+from sync_service_gateway_client.rest import ApiException
 from pprint import pprint
 
-# create an instance of the API class
-api_instance = swagger_client.IHNotificationsApi()
-transaction_id = NULL # object | 
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = sync_service_gateway_client.Configuration(
+    host = "http://localhost"
+)
 
-try:
-    # Get Ihcreate By Id
-    api_response = api_instance.get_ihcreate_by_id_ihcreate_transaction_id_get(transaction_id)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling IHNotificationsApi->get_ihcreate_by_id_ihcreate_transaction_id_get: %s\n" % e)
+
+# Enter a context with an instance of the API client
+with sync_service_gateway_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = sync_service_gateway_client.IHNotificationsApi(api_client)
+    transaction_id = 'transaction_id_example' # str | 
+
+    try:
+        # Get Ihcreate By Id
+        api_response = api_instance.get_ihcreate_by_id_ihcreate_transaction_id_get(transaction_id)
+        print("The response of IHNotificationsApi->get_ihcreate_by_id_ihcreate_transaction_id_get:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling IHNotificationsApi->get_ihcreate_by_id_ihcreate_transaction_id_get: %s\n" % e)
 ```
+
+
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **transaction_id** | [**object**](.md)|  | 
+ **transaction_id** | **str**|  | 
 
 ### Return type
 
@@ -191,86 +267,61 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+### HTTP response details
 
-# **get_ihcreate_by_state_ihcreate_find_by_state_post**
-> object get_ihcreate_by_state_ihcreate_find_by_state_post(state)
-
-Get Ihcreate By State
-
-### Example
-```python
-from __future__ import print_function
-import time
-import swagger_client
-from swagger_client.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = swagger_client.IHNotificationsApi()
-state = NULL # object | 
-
-try:
-    # Get Ihcreate By State
-    api_response = api_instance.get_ihcreate_by_state_ihcreate_find_by_state_post(state)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling IHNotificationsApi->get_ihcreate_by_state_ihcreate_find_by_state_post: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **state** | [**object**](.md)|  | 
-
-### Return type
-
-**object**
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful Response |  -  |
+**422** | Validation Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_ihcreate_ihcreate_get**
-> object get_ihcreate_ihcreate_get()
+> List[IHCreate] get_ihcreate_ihcreate_get()
 
 get ihcreate
 
 description
 
 ### Example
+
+
 ```python
-from __future__ import print_function
-import time
-import swagger_client
-from swagger_client.rest import ApiException
+import sync_service_gateway_client
+from sync_service_gateway_client.models.ih_create import IHCreate
+from sync_service_gateway_client.rest import ApiException
 from pprint import pprint
 
-# create an instance of the API class
-api_instance = swagger_client.IHNotificationsApi()
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = sync_service_gateway_client.Configuration(
+    host = "http://localhost"
+)
 
-try:
-    # get ihcreate
-    api_response = api_instance.get_ihcreate_ihcreate_get()
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling IHNotificationsApi->get_ihcreate_ihcreate_get: %s\n" % e)
+
+# Enter a context with an instance of the API client
+with sync_service_gateway_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = sync_service_gateway_client.IHNotificationsApi(api_client)
+
+    try:
+        # get ihcreate
+        api_response = api_instance.get_ihcreate_ihcreate_get()
+        print("The response of IHNotificationsApi->get_ihcreate_ihcreate_get:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling IHNotificationsApi->get_ihcreate_ihcreate_get: %s\n" % e)
 ```
 
+
+
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
 
-**object**
+[**List[IHCreate]**](IHCreate.md)
 
 ### Authorization
 
@@ -281,101 +332,11 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+### HTTP response details
 
-# **increment_ihcreate_retry_count_ihcreate_transaction_id_retry_count_put**
-> ApiResponse increment_ihcreate_retry_count_ihcreate_transaction_id_retry_count_put(transaction_id, retry_count)
-
-Increment Ihcreate Retry Count
-
-### Example
-```python
-from __future__ import print_function
-import time
-import swagger_client
-from swagger_client.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = swagger_client.IHNotificationsApi()
-transaction_id = NULL # object | 
-retry_count = NULL # object | 
-
-try:
-    # Increment Ihcreate Retry Count
-    api_response = api_instance.increment_ihcreate_retry_count_ihcreate_transaction_id_retry_count_put(transaction_id, retry_count)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling IHNotificationsApi->increment_ihcreate_retry_count_ihcreate_transaction_id_retry_count_put: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **transaction_id** | [**object**](.md)|  | 
- **retry_count** | [**object**](.md)|  | 
-
-### Return type
-
-[**ApiResponse**](ApiResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **update_ihcreate_state_ihcreate_transaction_id_state_put**
-> ApiResponse update_ihcreate_state_ihcreate_transaction_id_state_put(transaction_id, state)
-
-Update Ihcreate State
-
-### Example
-```python
-from __future__ import print_function
-import time
-import swagger_client
-from swagger_client.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = swagger_client.IHNotificationsApi()
-transaction_id = NULL # object | 
-state = NULL # object | 
-
-try:
-    # Update Ihcreate State
-    api_response = api_instance.update_ihcreate_state_ihcreate_transaction_id_state_put(transaction_id, state)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling IHNotificationsApi->update_ihcreate_state_ihcreate_transaction_id_state_put: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **transaction_id** | [**object**](.md)|  | 
- **state** | [**object**](.md)|  | 
-
-### Return type
-
-[**ApiResponse**](ApiResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful Response |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

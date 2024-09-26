@@ -1,42 +1,58 @@
-# swagger_client.PortalApi
+# sync_service_gateway_client.PortalApi
 
-All URIs are relative to */*
+All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**add_portal_bp_update_portal_bp_update_post**](PortalApi.md#add_portal_bp_update_portal_bp_update_post) | **POST** /portal_bp_update | Add Portal Bp Update
 [**get_portal_bp_update_portal_bp_update_get**](PortalApi.md#get_portal_bp_update_portal_bp_update_get) | **GET** /portal_bp_update | Get Portal Bp Update
 
+
 # **add_portal_bp_update_portal_bp_update_post**
-> ApiResponse add_portal_bp_update_portal_bp_update_post(body)
+> ApiResponse add_portal_bp_update_portal_bp_update_post(portal_bp_update_create)
 
 Add Portal Bp Update
 
 ### Example
+
+
 ```python
-from __future__ import print_function
-import time
-import swagger_client
-from swagger_client.rest import ApiException
+import sync_service_gateway_client
+from sync_service_gateway_client.models.api_response import ApiResponse
+from sync_service_gateway_client.models.portal_bp_update_create import PortalBPUpdateCreate
+from sync_service_gateway_client.rest import ApiException
 from pprint import pprint
 
-# create an instance of the API class
-api_instance = swagger_client.PortalApi()
-body = swagger_client.PortalBPUpdateCreate() # PortalBPUpdateCreate | 
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = sync_service_gateway_client.Configuration(
+    host = "http://localhost"
+)
 
-try:
-    # Add Portal Bp Update
-    api_response = api_instance.add_portal_bp_update_portal_bp_update_post(body)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling PortalApi->add_portal_bp_update_portal_bp_update_post: %s\n" % e)
+
+# Enter a context with an instance of the API client
+with sync_service_gateway_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = sync_service_gateway_client.PortalApi(api_client)
+    portal_bp_update_create = sync_service_gateway_client.PortalBPUpdateCreate() # PortalBPUpdateCreate | 
+
+    try:
+        # Add Portal Bp Update
+        api_response = api_instance.add_portal_bp_update_portal_bp_update_post(portal_bp_update_create)
+        print("The response of PortalApi->add_portal_bp_update_portal_bp_update_post:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling PortalApi->add_portal_bp_update_portal_bp_update_post: %s\n" % e)
 ```
+
+
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**PortalBPUpdateCreate**](PortalBPUpdateCreate.md)|  | 
+ **portal_bp_update_create** | [**PortalBPUpdateCreate**](PortalBPUpdateCreate.md)|  | 
 
 ### Return type
 
@@ -51,38 +67,59 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful Response |  -  |
+**422** | Validation Error |  -  |
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_portal_bp_update_portal_bp_update_get**
-> object get_portal_bp_update_portal_bp_update_get()
+> List[PortalBPUpdate] get_portal_bp_update_portal_bp_update_get()
 
 Get Portal Bp Update
 
 ### Example
+
+
 ```python
-from __future__ import print_function
-import time
-import swagger_client
-from swagger_client.rest import ApiException
+import sync_service_gateway_client
+from sync_service_gateway_client.models.portal_bp_update import PortalBPUpdate
+from sync_service_gateway_client.rest import ApiException
 from pprint import pprint
 
-# create an instance of the API class
-api_instance = swagger_client.PortalApi()
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = sync_service_gateway_client.Configuration(
+    host = "http://localhost"
+)
 
-try:
-    # Get Portal Bp Update
-    api_response = api_instance.get_portal_bp_update_portal_bp_update_get()
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling PortalApi->get_portal_bp_update_portal_bp_update_get: %s\n" % e)
+
+# Enter a context with an instance of the API client
+with sync_service_gateway_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = sync_service_gateway_client.PortalApi(api_client)
+
+    try:
+        # Get Portal Bp Update
+        api_response = api_instance.get_portal_bp_update_portal_bp_update_get()
+        print("The response of PortalApi->get_portal_bp_update_portal_bp_update_get:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling PortalApi->get_portal_bp_update_portal_bp_update_get: %s\n" % e)
 ```
 
+
+
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
 
-**object**
+[**List[PortalBPUpdate]**](PortalBPUpdate.md)
 
 ### Authorization
 
@@ -92,6 +129,12 @@ No authorization required
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful Response |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
