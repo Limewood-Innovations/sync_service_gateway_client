@@ -57,5 +57,4 @@ sync_service_gateway_client/py.typed
 sync_service_gateway_client/rest.py
 test-requirements.txt
 test/__init__.py
-test/test_validation_error_loc_inner.py
 tox.ini

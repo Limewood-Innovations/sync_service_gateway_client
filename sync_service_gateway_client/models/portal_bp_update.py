@@ -41,7 +41,7 @@ class PortalBPUpdate(BaseModel):
     anmeldeid: StrictStr = Field(alias="ANMELDEID")
     anmeldeid_change: StrictInt = Field(alias="ANMELDEID_Change")
     change_timestamp: datetime = Field(alias="Change_Timestamp")
-    transaction_id: Optional[StrictStr] = '6a903766-c426-4f0b-a76b-4e5b98c4d231'
+    transaction_id: Optional[StrictStr] = 'f55859a5-c25b-42ca-9919-3c8ce58f6571'
     state: Optional[StrictStr] = 'initial'
     creation_date: Optional[datetime] = None
     last_updated: Optional[datetime] = None
@@ -112,7 +112,7 @@ class PortalBPUpdate(BaseModel):
             "ANMELDEID": obj.get("ANMELDEID"),
             "ANMELDEID_Change": obj.get("ANMELDEID_Change"),
             "Change_Timestamp": obj.get("Change_Timestamp"),
-            "transaction_id": obj.get("transaction_id") if obj.get("transaction_id") is not None else '6a903766-c426-4f0b-a76b-4e5b98c4d231',
+            "transaction_id": obj.get("transaction_id") if obj.get("transaction_id") is not None else 'f55859a5-c25b-42ca-9919-3c8ce58f6571',
             "state": obj.get("state") if obj.get("state") is not None else 'initial',
             "creation_date": obj.get("creation_date"),
             "last_updated": obj.get("last_updated")

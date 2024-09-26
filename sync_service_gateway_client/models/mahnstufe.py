@@ -30,7 +30,7 @@ class Mahnstufe(BaseModel):
     bukrs: StrictInt
     customer_number: StrictInt = Field(alias="customerNumber")
     dunning_block_reason: StrictStr = Field(alias="dunningBlockReason")
-    transaction_id: Optional[StrictStr] = '51e304b0-3937-41a7-a815-f18af766dfc6'
+    transaction_id: Optional[StrictStr] = '8dd19fc8-1961-4ee2-865e-45aeb263f0e9'
     state: Optional[StrictStr] = 'initial'
     creation_date: Optional[datetime] = None
     __properties: ClassVar[List[str]] = ["bukrs", "customerNumber", "dunningBlockReason", "transaction_id", "state", "creation_date"]
@@ -89,7 +89,7 @@ class Mahnstufe(BaseModel):
             "bukrs": obj.get("bukrs"),
             "customerNumber": obj.get("customerNumber"),
             "dunningBlockReason": obj.get("dunningBlockReason"),
-            "transaction_id": obj.get("transaction_id") if obj.get("transaction_id") is not None else '51e304b0-3937-41a7-a815-f18af766dfc6',
+            "transaction_id": obj.get("transaction_id") if obj.get("transaction_id") is not None else '8dd19fc8-1961-4ee2-865e-45aeb263f0e9',
             "state": obj.get("state") if obj.get("state") is not None else 'initial',
             "creation_date": obj.get("creation_date")
         })

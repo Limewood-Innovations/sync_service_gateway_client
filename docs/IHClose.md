@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **jira_ticket_number** | **str** |  | 
 **notif_number** | **int** |  | 
-**transaction_id** | **str** |  | [optional] [default to '62036b58-1055-43c9-8150-ead3309d7812']
+**transaction_id** | **str** |  | [optional] [default to 'cb58cbdc-9ec2-454b-a44e-63e3e2ff1755']
 **state** | **str** |  | [optional] [default to 'initial']
 **creation_date** | **datetime** |  | [optional] 
 **last_updated** | **datetime** |  | [optional] 

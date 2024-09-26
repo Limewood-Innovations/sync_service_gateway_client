@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **bukrs** | **int** |  | 
 **customer_number** | **int** |  | 
 **dunning_block_reason** | **str** |  | 
-**transaction_id** | **str** |  | [optional] [default to '51e304b0-3937-41a7-a815-f18af766dfc6']
+**transaction_id** | **str** |  | [optional] [default to '8dd19fc8-1961-4ee2-865e-45aeb263f0e9']
 **state** | **str** |  | [optional] [default to 'initial']
 **creation_date** | **datetime** |  | [optional] 
 

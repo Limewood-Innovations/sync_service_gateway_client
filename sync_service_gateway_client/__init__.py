@@ -14,7 +14,7 @@
 """  # noqa: E501
 
 
-__version__ = "v0.9.0"
+__version__ = "v1.0.0"
 
 # import apis into sdk package
 from sync_service_gateway_client.api.ih_notifications_api import IHNotificationsApi

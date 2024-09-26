@@ -33,7 +33,7 @@ class Kontoauszug(BaseModel):
     var_date: date = Field(alias="date")
     jira_ticket_number: StrictStr = Field(alias="jiraTicketNumber")
     mode: StrictStr
-    transaction_id: Optional[StrictStr] = '0039f3fe-7b2c-423f-a7b5-76e9b6d2c200'
+    transaction_id: Optional[StrictStr] = '5aff37cf-d994-4459-9b5e-da73704d438f'
     state: Optional[StrictStr] = 'initial'
     creation_date: Optional[datetime] = None
     __properties: ClassVar[List[str]] = ["bukrs", "customerNumber", "contractNumber", "date", "jiraTicketNumber", "mode", "transaction_id", "state", "creation_date"]
@@ -95,7 +95,7 @@ class Kontoauszug(BaseModel):
             "date": obj.get("date"),
             "jiraTicketNumber": obj.get("jiraTicketNumber"),
             "mode": obj.get("mode"),
-            "transaction_id": obj.get("transaction_id") if obj.get("transaction_id") is not None else '0039f3fe-7b2c-423f-a7b5-76e9b6d2c200',
+            "transaction_id": obj.get("transaction_id") if obj.get("transaction_id") is not None else '5aff37cf-d994-4459-9b5e-da73704d438f',
             "state": obj.get("state") if obj.get("state") is not None else 'initial',
             "creation_date": obj.get("creation_date")
         })

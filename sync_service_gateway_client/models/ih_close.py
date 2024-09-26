@@ -29,7 +29,7 @@ class IHClose(BaseModel):
     """ # noqa: E501
     jira_ticket_number: StrictStr
     notif_number: StrictInt
-    transaction_id: Optional[StrictStr] = '62036b58-1055-43c9-8150-ead3309d7812'
+    transaction_id: Optional[StrictStr] = 'cb58cbdc-9ec2-454b-a44e-63e3e2ff1755'
     state: Optional[StrictStr] = 'initial'
     creation_date: Optional[datetime] = None
     last_updated: Optional[datetime] = None
@@ -88,7 +88,7 @@ class IHClose(BaseModel):
         _obj = cls.model_validate({
             "jira_ticket_number": obj.get("jira_ticket_number"),
             "notif_number": obj.get("notif_number"),
-            "transaction_id": obj.get("transaction_id") if obj.get("transaction_id") is not None else '62036b58-1055-43c9-8150-ead3309d7812',
+            "transaction_id": obj.get("transaction_id") if obj.get("transaction_id") is not None else 'cb58cbdc-9ec2-454b-a44e-63e3e2ff1755',
             "state": obj.get("state") if obj.get("state") is not None else 'initial',
             "creation_date": obj.get("creation_date"),
             "last_updated": obj.get("last_updated")

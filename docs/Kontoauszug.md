@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **var_date** | **date** |  | 
 **jira_ticket_number** | **str** |  | 
 **mode** | **str** |  | 
-**transaction_id** | **str** |  | [optional] [default to '0039f3fe-7b2c-423f-a7b5-76e9b6d2c200']
+**transaction_id** | **str** |  | [optional] [default to '5aff37cf-d994-4459-9b5e-da73704d438f']
 **state** | **str** |  | [optional] [default to 'initial']
 **creation_date** | **datetime** |  | [optional] 
 

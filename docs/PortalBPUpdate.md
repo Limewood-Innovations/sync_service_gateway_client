@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 **anmeldeid** | **str** |  | 
 **anmeldeid_change** | **int** |  | 
 **change_timestamp** | **datetime** |  | 
-**transaction_id** | **str** |  | [optional] [default to '6a903766-c426-4f0b-a76b-4e5b98c4d231']
+**transaction_id** | **str** |  | [optional] [default to 'f55859a5-c25b-42ca-9919-3c8ce58f6571']
 **state** | **str** |  | [optional] [default to 'initial']
 **creation_date** | **datetime** |  | [optional] 
 **last_updated** | **datetime** |  | [optional] 
