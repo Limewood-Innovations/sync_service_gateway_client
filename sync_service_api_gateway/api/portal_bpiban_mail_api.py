@@ -16,7 +16,7 @@ from pydantic import validate_call, Field, StrictFloat, StrictStr, StrictInt
 from typing import Any, Dict, List, Optional, Tuple, Union
 from typing_extensions import Annotated
 
-from pydantic import StrictInt, StrictStr
+from pydantic import StrictStr
 from typing import List
 from sync_service_api_gateway.models.portal_bp_iban_mail import PortalBPIbanMail
 from sync_service_api_gateway.models.portal_bp_iban_mail_create import PortalBPIbanMailCreate
@@ -59,6 +59,7 @@ class PortalBPIBANMailApi:
     ) -> PortalBPIbanMail:
         """Add Portal Bp Iban Mail
 
+        Add a new PortalBPIbanMail record.  This endpoint creates a new IBAN mail record in the database based on the provided data. Requires API key authentication.  Args:     bp (PortalBPIbanMailCreate): The request body containing the data for the new record.     session (AsyncSession): The database session, provided by FastAPI dependency injection.  Returns:     PortalBPIbanMail: The created IBAN mail record.  Raises:     HTTPException: If a server error occurs during the database transaction.
 
         :param portal_bp_iban_mail_create: (required)
         :type portal_bp_iban_mail_create: PortalBPIbanMailCreate
@@ -126,6 +127,7 @@ class PortalBPIBANMailApi:
     ) -> ApiResponse[PortalBPIbanMail]:
         """Add Portal Bp Iban Mail
 
+        Add a new PortalBPIbanMail record.  This endpoint creates a new IBAN mail record in the database based on the provided data. Requires API key authentication.  Args:     bp (PortalBPIbanMailCreate): The request body containing the data for the new record.     session (AsyncSession): The database session, provided by FastAPI dependency injection.  Returns:     PortalBPIbanMail: The created IBAN mail record.  Raises:     HTTPException: If a server error occurs during the database transaction.
 
         :param portal_bp_iban_mail_create: (required)
         :type portal_bp_iban_mail_create: PortalBPIbanMailCreate
@@ -193,6 +195,7 @@ class PortalBPIBANMailApi:
     ) -> RESTResponseType:
         """Add Portal Bp Iban Mail
 
+        Add a new PortalBPIbanMail record.  This endpoint creates a new IBAN mail record in the database based on the provided data. Requires API key authentication.  Args:     bp (PortalBPIbanMailCreate): The request body containing the data for the new record.     session (AsyncSession): The database session, provided by FastAPI dependency injection.  Returns:     PortalBPIbanMail: The created IBAN mail record.  Raises:     HTTPException: If a server error occurs during the database transaction.
 
         :param portal_bp_iban_mail_create: (required)
         :type portal_bp_iban_mail_create: PortalBPIbanMailCreate
@@ -331,6 +334,7 @@ class PortalBPIBANMailApi:
     ) -> List[PortalBPIbanMail]:
         """Find Portal Bp Iban Mail By State
 
+        Find all PortalBPIbanMail records by state.  This endpoint fetches all IBAN mail records that match the provided state value. Requires API key authentication.  Args:     state (str): The state value to filter records by.     session (AsyncSession): The database session, provided by FastAPI dependency injection.  Returns:     list[PortalBPIbanMail]: List of IBAN mail records matching the provided state.
 
         :param state: (required)
         :type state: str
@@ -398,6 +402,7 @@ class PortalBPIBANMailApi:
     ) -> ApiResponse[List[PortalBPIbanMail]]:
         """Find Portal Bp Iban Mail By State
 
+        Find all PortalBPIbanMail records by state.  This endpoint fetches all IBAN mail records that match the provided state value. Requires API key authentication.  Args:     state (str): The state value to filter records by.     session (AsyncSession): The database session, provided by FastAPI dependency injection.  Returns:     list[PortalBPIbanMail]: List of IBAN mail records matching the provided state.
 
         :param state: (required)
         :type state: str
@@ -465,6 +470,7 @@ class PortalBPIBANMailApi:
     ) -> RESTResponseType:
         """Find Portal Bp Iban Mail By State
 
+        Find all PortalBPIbanMail records by state.  This endpoint fetches all IBAN mail records that match the provided state value. Requires API key authentication.  Args:     state (str): The state value to filter records by.     session (AsyncSession): The database session, provided by FastAPI dependency injection.  Returns:     list[PortalBPIbanMail]: List of IBAN mail records matching the provided state.
 
         :param state: (required)
         :type state: str
@@ -591,6 +597,7 @@ class PortalBPIBANMailApi:
     ) -> List[PortalBPIbanMail]:
         """Get Portal Bp Iban Mail
 
+        Retrieve all PortalBPIbanMail records.  This endpoint fetches and returns all IBAN mail records from the database. Requires API key authentication.  Args:     session (AsyncSession): The database session, provided by FastAPI dependency injection.  Returns:     list[PortalBPIbanMail]: List of IBAN mail records.  Raises:     HTTPException: If no records are found.
 
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -653,6 +660,7 @@ class PortalBPIBANMailApi:
     ) -> ApiResponse[List[PortalBPIbanMail]]:
         """Get Portal Bp Iban Mail
 
+        Retrieve all PortalBPIbanMail records.  This endpoint fetches and returns all IBAN mail records from the database. Requires API key authentication.  Args:     session (AsyncSession): The database session, provided by FastAPI dependency injection.  Returns:     list[PortalBPIbanMail]: List of IBAN mail records.  Raises:     HTTPException: If no records are found.
 
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -715,6 +723,7 @@ class PortalBPIBANMailApi:
     ) -> RESTResponseType:
         """Get Portal Bp Iban Mail
 
+        Retrieve all PortalBPIbanMail records.  This endpoint fetches and returns all IBAN mail records from the database. Requires API key authentication.  Args:     session (AsyncSession): The database session, provided by FastAPI dependency injection.  Returns:     list[PortalBPIbanMail]: List of IBAN mail records.  Raises:     HTTPException: If no records are found.
 
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -833,6 +842,7 @@ class PortalBPIBANMailApi:
     ) -> PortalBPIbanMail:
         """Get Portal Bp Iban Mail By Id
 
+        Retrieve a PortalBPIbanMail record by its transaction ID.  This endpoint fetches a single IBAN mail record using the provided transaction ID. Requires API key authentication.  Args:     transaction_id (str): The unique transaction ID of the IBAN mail record.     session (AsyncSession): The database session, provided by FastAPI dependency injection.  Returns:     PortalBPIbanMail: The IBAN mail record corresponding to the transaction ID.  Raises:     HTTPException: If the record is not found.
 
         :param transaction_id: (required)
         :type transaction_id: str
@@ -900,6 +910,7 @@ class PortalBPIBANMailApi:
     ) -> ApiResponse[PortalBPIbanMail]:
         """Get Portal Bp Iban Mail By Id
 
+        Retrieve a PortalBPIbanMail record by its transaction ID.  This endpoint fetches a single IBAN mail record using the provided transaction ID. Requires API key authentication.  Args:     transaction_id (str): The unique transaction ID of the IBAN mail record.     session (AsyncSession): The database session, provided by FastAPI dependency injection.  Returns:     PortalBPIbanMail: The IBAN mail record corresponding to the transaction ID.  Raises:     HTTPException: If the record is not found.
 
         :param transaction_id: (required)
         :type transaction_id: str
@@ -967,6 +978,7 @@ class PortalBPIBANMailApi:
     ) -> RESTResponseType:
         """Get Portal Bp Iban Mail By Id
 
+        Retrieve a PortalBPIbanMail record by its transaction ID.  This endpoint fetches a single IBAN mail record using the provided transaction ID. Requires API key authentication.  Args:     transaction_id (str): The unique transaction ID of the IBAN mail record.     session (AsyncSession): The database session, provided by FastAPI dependency injection.  Returns:     PortalBPIbanMail: The IBAN mail record corresponding to the transaction ID.  Raises:     HTTPException: If the record is not found.
 
         :param transaction_id: (required)
         :type transaction_id: str
@@ -1092,6 +1104,7 @@ class PortalBPIBANMailApi:
     ) -> PortalBPUpdate:
         """Get Portal Bp Update By Transaction Id
 
+        Retrieve the parent PortalBPUpdate record by child IBAN mail's transaction ID.  This endpoint fetches the parent PortalBPUpdate record associated with the provided IBAN mail's transaction ID. Requires API key authentication.  Args:     transaction_id (str): The transaction ID of the IBAN mail record.     session (AsyncSession): The database session, provided by FastAPI dependency injection.  Returns:     PortalBPUpdate: The parent BP update record.  Raises:     HTTPException: If either the IBAN mail or the parent BP update record is not found.
 
         :param transaction_id: (required)
         :type transaction_id: str
@@ -1159,6 +1172,7 @@ class PortalBPIBANMailApi:
     ) -> ApiResponse[PortalBPUpdate]:
         """Get Portal Bp Update By Transaction Id
 
+        Retrieve the parent PortalBPUpdate record by child IBAN mail's transaction ID.  This endpoint fetches the parent PortalBPUpdate record associated with the provided IBAN mail's transaction ID. Requires API key authentication.  Args:     transaction_id (str): The transaction ID of the IBAN mail record.     session (AsyncSession): The database session, provided by FastAPI dependency injection.  Returns:     PortalBPUpdate: The parent BP update record.  Raises:     HTTPException: If either the IBAN mail or the parent BP update record is not found.
 
         :param transaction_id: (required)
         :type transaction_id: str
@@ -1226,6 +1240,7 @@ class PortalBPIBANMailApi:
     ) -> RESTResponseType:
         """Get Portal Bp Update By Transaction Id
 
+        Retrieve the parent PortalBPUpdate record by child IBAN mail's transaction ID.  This endpoint fetches the parent PortalBPUpdate record associated with the provided IBAN mail's transaction ID. Requires API key authentication.  Args:     transaction_id (str): The transaction ID of the IBAN mail record.     session (AsyncSession): The database session, provided by FastAPI dependency injection.  Returns:     PortalBPUpdate: The parent BP update record.  Raises:     HTTPException: If either the IBAN mail or the parent BP update record is not found.
 
         :param transaction_id: (required)
         :type transaction_id: str
@@ -1333,10 +1348,9 @@ class PortalBPIBANMailApi:
 
 
     @validate_call
-    def portal__bp_iban_mail_update_portal_bp_iban_mail_retry_count(
+    def portal__bp_iban_mail_increment_portal_bp_iban_mail_retry_count(
         self,
         transaction_id: StrictStr,
-        retry_count: StrictInt,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1350,13 +1364,12 @@ class PortalBPIBANMailApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> PortalBPIbanMail:
-        """Update Portal Bp Iban Mail Retry Count
+        """Increment Portal Bp Iban Mail Retry Count
 
+        Increment the retry count of a PortalBPIbanMail record.  This endpoint increments the 'retry_count' field by the provided value. Requires API key authentication.  Args:     transaction_id (str): The unique transaction ID of the IBAN mail record.     retry_count (int): The number of retries to add.     session (AsyncSession): The database session, provided by FastAPI dependency injection.  Returns:     PortalBPIbanMail: The updated IBAN mail record with incremented retry count.  Raises:     HTTPException: If the record is not found or if a server error occurs during the update.
 
         :param transaction_id: (required)
         :type transaction_id: str
-        :param retry_count: (required)
-        :type retry_count: int
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -1379,9 +1392,8 @@ class PortalBPIBANMailApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._portal__bp_iban_mail_update_portal_bp_iban_mail_retry_count_serialize(
+        _param = self._portal__bp_iban_mail_increment_portal_bp_iban_mail_retry_count_serialize(
             transaction_id=transaction_id,
-            retry_count=retry_count,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -1404,10 +1416,9 @@ class PortalBPIBANMailApi:
 
 
     @validate_call
-    def portal__bp_iban_mail_update_portal_bp_iban_mail_retry_count_with_http_info(
+    def portal__bp_iban_mail_increment_portal_bp_iban_mail_retry_count_with_http_info(
         self,
         transaction_id: StrictStr,
-        retry_count: StrictInt,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1421,13 +1432,12 @@ class PortalBPIBANMailApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[PortalBPIbanMail]:
-        """Update Portal Bp Iban Mail Retry Count
+        """Increment Portal Bp Iban Mail Retry Count
 
+        Increment the retry count of a PortalBPIbanMail record.  This endpoint increments the 'retry_count' field by the provided value. Requires API key authentication.  Args:     transaction_id (str): The unique transaction ID of the IBAN mail record.     retry_count (int): The number of retries to add.     session (AsyncSession): The database session, provided by FastAPI dependency injection.  Returns:     PortalBPIbanMail: The updated IBAN mail record with incremented retry count.  Raises:     HTTPException: If the record is not found or if a server error occurs during the update.
 
         :param transaction_id: (required)
         :type transaction_id: str
-        :param retry_count: (required)
-        :type retry_count: int
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -1450,9 +1460,8 @@ class PortalBPIBANMailApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._portal__bp_iban_mail_update_portal_bp_iban_mail_retry_count_serialize(
+        _param = self._portal__bp_iban_mail_increment_portal_bp_iban_mail_retry_count_serialize(
             transaction_id=transaction_id,
-            retry_count=retry_count,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -1475,10 +1484,9 @@ class PortalBPIBANMailApi:
 
 
     @validate_call
-    def portal__bp_iban_mail_update_portal_bp_iban_mail_retry_count_without_preload_content(
+    def portal__bp_iban_mail_increment_portal_bp_iban_mail_retry_count_without_preload_content(
         self,
         transaction_id: StrictStr,
-        retry_count: StrictInt,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1492,13 +1500,12 @@ class PortalBPIBANMailApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """Update Portal Bp Iban Mail Retry Count
+        """Increment Portal Bp Iban Mail Retry Count
 
+        Increment the retry count of a PortalBPIbanMail record.  This endpoint increments the 'retry_count' field by the provided value. Requires API key authentication.  Args:     transaction_id (str): The unique transaction ID of the IBAN mail record.     retry_count (int): The number of retries to add.     session (AsyncSession): The database session, provided by FastAPI dependency injection.  Returns:     PortalBPIbanMail: The updated IBAN mail record with incremented retry count.  Raises:     HTTPException: If the record is not found or if a server error occurs during the update.
 
         :param transaction_id: (required)
         :type transaction_id: str
-        :param retry_count: (required)
-        :type retry_count: int
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -1521,9 +1528,8 @@ class PortalBPIBANMailApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._portal__bp_iban_mail_update_portal_bp_iban_mail_retry_count_serialize(
+        _param = self._portal__bp_iban_mail_increment_portal_bp_iban_mail_retry_count_serialize(
             transaction_id=transaction_id,
-            retry_count=retry_count,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -1541,10 +1547,9 @@ class PortalBPIBANMailApi:
         return response_data.response
 
 
-    def _portal__bp_iban_mail_update_portal_bp_iban_mail_retry_count_serialize(
+    def _portal__bp_iban_mail_increment_portal_bp_iban_mail_retry_count_serialize(
         self,
         transaction_id,
-        retry_count,
         _request_auth,
         _content_type,
         _headers,
@@ -1567,10 +1572,6 @@ class PortalBPIBANMailApi:
         if transaction_id is not None:
             _path_params['transaction_id'] = transaction_id
         # process the query parameters
-        if retry_count is not None:
-            
-            _query_params.append(('retry_count', retry_count))
-            
         # process the header parameters
         # process the form parameters
         # process the body parameter
@@ -1628,6 +1629,7 @@ class PortalBPIBANMailApi:
     ) -> PortalBPIbanMail:
         """Update Portal Bp Iban Mail State
 
+        Update the state of a PortalBPIbanMail record.  This endpoint updates the 'state' field of a specified IBAN mail record. Requires API key authentication.  Args:     transaction_id (str): The unique transaction ID of the IBAN mail record.     state (str): The new state value to be updated.     session (AsyncSession): The database session, provided by FastAPI dependency injection.  Returns:     PortalBPIbanMail: The updated IBAN mail record.  Raises:     HTTPException: If the record is not found or if a server error occurs during the update.
 
         :param transaction_id: (required)
         :type transaction_id: str
@@ -1699,6 +1701,7 @@ class PortalBPIBANMailApi:
     ) -> ApiResponse[PortalBPIbanMail]:
         """Update Portal Bp Iban Mail State
 
+        Update the state of a PortalBPIbanMail record.  This endpoint updates the 'state' field of a specified IBAN mail record. Requires API key authentication.  Args:     transaction_id (str): The unique transaction ID of the IBAN mail record.     state (str): The new state value to be updated.     session (AsyncSession): The database session, provided by FastAPI dependency injection.  Returns:     PortalBPIbanMail: The updated IBAN mail record.  Raises:     HTTPException: If the record is not found or if a server error occurs during the update.
 
         :param transaction_id: (required)
         :type transaction_id: str
@@ -1770,6 +1773,7 @@ class PortalBPIBANMailApi:
     ) -> RESTResponseType:
         """Update Portal Bp Iban Mail State
 
+        Update the state of a PortalBPIbanMail record.  This endpoint updates the 'state' field of a specified IBAN mail record. Requires API key authentication.  Args:     transaction_id (str): The unique transaction ID of the IBAN mail record.     state (str): The new state value to be updated.     session (AsyncSession): The database session, provided by FastAPI dependency injection.  Returns:     PortalBPIbanMail: The updated IBAN mail record.  Raises:     HTTPException: If the record is not found or if a server error occurs during the update.
 
         :param transaction_id: (required)
         :type transaction_id: str

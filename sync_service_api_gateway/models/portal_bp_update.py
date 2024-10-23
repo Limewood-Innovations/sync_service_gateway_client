@@ -25,27 +25,27 @@ from typing_extensions import Self
 
 class PortalBPUpdate(BaseModel):
     """
-    Model for managing business partner updates in the database.  This model extends PortalBPUpdateBase to include transaction metadata for database storage, and is used for both FastAPI endpoints and Alembic migrations.  Attributes:     transaction_id (str): Unique identifier for the transaction, generated as a UUID.     state (str): Current state of the transaction (e.g., 'initial', 'processing', 'completed').     retry_count (int): Number of times the transaction has been retried.     creation_date (datetime): The date when the transaction was created.     last_updated (datetime): The date when the transaction was last updated.
+    Database model for storing business partner updates.  This model extends `PortalBPUpdateBase` to include metadata for transaction management, such as a unique transaction ID, state tracking, retry count, and timestamps for creation and last update. It is used in FastAPI endpoints and database migrations.  Attributes:     transaction_id (str): A unique identifier for the transaction, generated as a UUID.     state (str): The current state of the transaction (e.g., 'initial', 'processing', 'completed').     retry_count (int): The number of times the transaction has been retried.     creation_date (datetime): The date when the transaction was created.     last_updated (datetime): The date when the transaction was last updated.
     """ # noqa: E501
-    bpnr: StrictStr
-    mail: StrictStr
-    mail_change: StrictInt
-    mobile: StrictStr
-    mobile_change: StrictInt
-    iban: StrictStr
-    iban_change: StrictInt
-    datenschutz: StrictStr
-    datenschutz_change: StrictInt
-    post: StrictStr
-    post_change: StrictInt
-    anmeldeid: StrictStr
-    anmeldeid_change: StrictInt
-    change_timestamp: datetime
-    transaction_id: Optional[StrictStr] = None
-    state: Optional[StrictStr] = Field(default='initial', description="Current state of the transaction (e.g., 'initial', 'processing', 'completed').")
-    retry_count: Optional[StrictInt] = Field(default=0, description="Number of times the transaction has been retried.")
-    creation_date: Optional[datetime] = Field(default=None, description="Timestamp when the transaction was created.")
-    last_updated: Optional[datetime] = Field(default=None, description="Timestamp when the transaction was last updated.")
+    bpnr: StrictStr = Field(description="The Business Partner Number.")
+    mail: StrictStr = Field(description="The email address of the business partner.")
+    mail_change: StrictInt = Field(description="Flag indicating if the email has changed (0 = no change, 1 = changed).")
+    mobile: StrictStr = Field(description="The mobile phone number of the business partner.")
+    mobile_change: StrictInt = Field(description="Flag indicating if the mobile number has changed (0 = no change, 1 = changed).")
+    iban: StrictStr = Field(description="The IBAN (International Bank Account Number) of the business partner.")
+    iban_change: StrictInt = Field(description="Flag indicating if the IBAN has changed (0 = no change, 1 = changed).")
+    datenschutz: StrictStr = Field(description="The data privacy preferences (e.g., consent or refusal).")
+    datenschutz_change: StrictInt = Field(description="Flag indicating if data privacy preferences have changed (0 = no change, 1 = changed).")
+    post: StrictStr = Field(description="Postal communication preferences of the business partner.")
+    post_change: StrictInt = Field(description="Flag indicating if postal communication preferences have changed (0 = no change, 1 = changed).")
+    anmeldeid: StrictStr = Field(description="The registration ID of the business partner.")
+    anmeldeid_change: StrictInt = Field(description="Flag indicating if the registration ID has changed (0 = no change, 1 = changed).")
+    change_timestamp: datetime = Field(description="The timestamp indicating when the changes were made.")
+    transaction_id: Optional[StrictStr] = Field(default=None, description="A unique transaction ID generated as a UUID.")
+    state: Optional[StrictStr] = Field(default='initial', description="The current state of the transaction (e.g., 'initial', 'processing', 'completed').")
+    retry_count: Optional[StrictInt] = Field(default=0, description="The number of times the transaction has been retried.")
+    creation_date: Optional[datetime] = Field(default=None, description="The timestamp when the transaction was created.")
+    last_updated: Optional[datetime] = Field(default=None, description="The timestamp when the transaction was last updated.")
     __properties: ClassVar[List[str]] = ["bpnr", "mail", "mail_change", "mobile", "mobile_change", "iban", "iban_change", "datenschutz", "datenschutz_change", "post", "post_change", "anmeldeid", "anmeldeid_change", "change_timestamp", "transaction_id", "state", "retry_count", "creation_date", "last_updated"]
 
     model_config = ConfigDict(

@@ -1,25 +1,25 @@
 # PortalBPUpdateCreate
 
-Model for creating a new PortalBPUpdate instance via API.  This model is used for handling user input during business partner updates.
+Model for creating a new PortalBPUpdate instance via API.  This class is used for capturing and handling input when updating a business partner's details in the portal. It extends from the base class `PortalBPUpdateBase`.
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**bpnr** | **str** |  | 
-**mail** | **str** |  | 
-**mail_change** | **int** |  | 
-**mobile** | **str** |  | 
-**mobile_change** | **int** |  | 
-**iban** | **str** |  | 
-**iban_change** | **int** |  | 
-**datenschutz** | **str** |  | 
-**datenschutz_change** | **int** |  | 
-**post** | **str** |  | 
-**post_change** | **int** |  | 
-**anmeldeid** | **str** |  | 
-**anmeldeid_change** | **int** |  | 
-**change_timestamp** | **datetime** |  | 
+**bpnr** | **str** | The Business Partner Number. | 
+**mail** | **str** | The email address of the business partner. | 
+**mail_change** | **int** | Flag indicating if the email has changed (0 &#x3D; no change, 1 &#x3D; changed). | 
+**mobile** | **str** | The mobile phone number of the business partner. | 
+**mobile_change** | **int** | Flag indicating if the mobile number has changed (0 &#x3D; no change, 1 &#x3D; changed). | 
+**iban** | **str** | The IBAN (International Bank Account Number) of the business partner. | 
+**iban_change** | **int** | Flag indicating if the IBAN has changed (0 &#x3D; no change, 1 &#x3D; changed). | 
+**datenschutz** | **str** | The data privacy preferences (e.g., consent or refusal). | 
+**datenschutz_change** | **int** | Flag indicating if data privacy preferences have changed (0 &#x3D; no change, 1 &#x3D; changed). | 
+**post** | **str** | Postal communication preferences of the business partner. | 
+**post_change** | **int** | Flag indicating if postal communication preferences have changed (0 &#x3D; no change, 1 &#x3D; changed). | 
+**anmeldeid** | **str** | The registration ID of the business partner. | 
+**anmeldeid_change** | **int** | Flag indicating if the registration ID has changed (0 &#x3D; no change, 1 &#x3D; changed). | 
+**change_timestamp** | **datetime** | The timestamp indicating when the changes were made. | 
 
 ## Example
 

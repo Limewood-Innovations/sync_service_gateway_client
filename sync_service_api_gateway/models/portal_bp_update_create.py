@@ -18,29 +18,29 @@ import re  # noqa: F401
 import json
 
 from datetime import datetime
-from pydantic import BaseModel, ConfigDict, StrictInt, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List
 from typing import Optional, Set
 from typing_extensions import Self
 
 class PortalBPUpdateCreate(BaseModel):
     """
-    Model for creating a new PortalBPUpdate instance via API.  This model is used for handling user input during business partner updates.
+    Model for creating a new PortalBPUpdate instance via API.  This class is used for capturing and handling input when updating a business partner's details in the portal. It extends from the base class `PortalBPUpdateBase`.
     """ # noqa: E501
-    bpnr: StrictStr
-    mail: StrictStr
-    mail_change: StrictInt
-    mobile: StrictStr
-    mobile_change: StrictInt
-    iban: StrictStr
-    iban_change: StrictInt
-    datenschutz: StrictStr
-    datenschutz_change: StrictInt
-    post: StrictStr
-    post_change: StrictInt
-    anmeldeid: StrictStr
-    anmeldeid_change: StrictInt
-    change_timestamp: datetime
+    bpnr: StrictStr = Field(description="The Business Partner Number.")
+    mail: StrictStr = Field(description="The email address of the business partner.")
+    mail_change: StrictInt = Field(description="Flag indicating if the email has changed (0 = no change, 1 = changed).")
+    mobile: StrictStr = Field(description="The mobile phone number of the business partner.")
+    mobile_change: StrictInt = Field(description="Flag indicating if the mobile number has changed (0 = no change, 1 = changed).")
+    iban: StrictStr = Field(description="The IBAN (International Bank Account Number) of the business partner.")
+    iban_change: StrictInt = Field(description="Flag indicating if the IBAN has changed (0 = no change, 1 = changed).")
+    datenschutz: StrictStr = Field(description="The data privacy preferences (e.g., consent or refusal).")
+    datenschutz_change: StrictInt = Field(description="Flag indicating if data privacy preferences have changed (0 = no change, 1 = changed).")
+    post: StrictStr = Field(description="Postal communication preferences of the business partner.")
+    post_change: StrictInt = Field(description="Flag indicating if postal communication preferences have changed (0 = no change, 1 = changed).")
+    anmeldeid: StrictStr = Field(description="The registration ID of the business partner.")
+    anmeldeid_change: StrictInt = Field(description="Flag indicating if the registration ID has changed (0 = no change, 1 = changed).")
+    change_timestamp: datetime = Field(description="The timestamp indicating when the changes were made.")
     __properties: ClassVar[List[str]] = ["bpnr", "mail", "mail_change", "mobile", "mobile_change", "iban", "iban_change", "datenschutz", "datenschutz_change", "post", "post_change", "anmeldeid", "anmeldeid_change", "change_timestamp"]
 
     model_config = ConfigDict(
