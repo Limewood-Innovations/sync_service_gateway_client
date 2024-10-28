@@ -14,7 +14,7 @@
 """  # noqa: E501
 
 
-__version__ = "1.2.2"
+__version__ = "1.2.3"
 
 # import apis into sdk package
 from sync_service_api_gateway.api.health_check_api import HealthCheckApi

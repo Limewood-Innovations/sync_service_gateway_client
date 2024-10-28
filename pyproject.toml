@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "sync_service_api_gateway"
-version = "1.2.2"
+version = "1.2.3"
 description = "sync-service-api-gateway"
 authors = ["OpenAPI Generator Community <team@openapitools.org>"]
 license = "NoLicense"

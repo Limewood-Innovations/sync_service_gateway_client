@@ -28,8 +28,9 @@ class SendOrderDocumentCreate(BaseModel):
     """ # noqa: E501
     parent_transaction_id: StrictStr = Field(description="The parent transaction ID from the Order Document creation process.")
     mail_address: StrictStr = Field(description="The email address to send the order document to.")
+    mail_address_iv: StrictStr = Field(description="The email address to which a copy of the order document will be sent.")
     osid_order_document: StrictInt = Field(description="The OSID number of the order document.")
-    __properties: ClassVar[List[str]] = ["parent_transaction_id", "mail_address", "osid_order_document"]
+    __properties: ClassVar[List[str]] = ["parent_transaction_id", "mail_address", "mail_address_iv", "osid_order_document"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -84,6 +85,7 @@ class SendOrderDocumentCreate(BaseModel):
         _obj = cls.model_validate({
             "parent_transaction_id": obj.get("parent_transaction_id"),
             "mail_address": obj.get("mail_address"),
+            "mail_address_iv": obj.get("mail_address_iv"),
             "osid_order_document": obj.get("osid_order_document")
         })
         return _obj

@@ -29,13 +29,14 @@ class SendOrderDocument(BaseModel):
     """ # noqa: E501
     parent_transaction_id: StrictStr = Field(description="The parent transaction ID from the Order Document creation process.")
     mail_address: StrictStr = Field(description="The email address to send the order document to.")
+    mail_address_iv: StrictStr = Field(description="The email address to which a copy of the order document will be sent.")
     osid_order_document: StrictInt = Field(description="The OSID number of the order document.")
     transaction_id: Optional[StrictStr] = Field(default=None, description="A unique transaction ID, automatically generated for the sending order document transaction.")
     state: Optional[StrictStr] = Field(default='initial', description="The current state of the transaction (e.g., 'initial', 'processing', 'completed').")
     retry_count: Optional[StrictInt] = Field(default=0, description="The number of times the transaction has been retried.")
     creation_date: Optional[datetime] = Field(default=None, description="The timestamp when the transaction was created.")
     last_updated: Optional[datetime] = Field(default=None, description="The timestamp when the transaction was last updated.")
-    __properties: ClassVar[List[str]] = ["parent_transaction_id", "mail_address", "osid_order_document", "transaction_id", "state", "retry_count", "creation_date", "last_updated"]
+    __properties: ClassVar[List[str]] = ["parent_transaction_id", "mail_address", "mail_address_iv", "osid_order_document", "transaction_id", "state", "retry_count", "creation_date", "last_updated"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -90,6 +91,7 @@ class SendOrderDocument(BaseModel):
         _obj = cls.model_validate({
             "parent_transaction_id": obj.get("parent_transaction_id"),
             "mail_address": obj.get("mail_address"),
+            "mail_address_iv": obj.get("mail_address_iv"),
             "osid_order_document": obj.get("osid_order_document"),
             "transaction_id": obj.get("transaction_id"),
             "state": obj.get("state") if obj.get("state") is not None else 'initial',

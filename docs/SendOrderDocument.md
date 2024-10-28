@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **parent_transaction_id** | **str** | The parent transaction ID from the Order Document creation process. | 
 **mail_address** | **str** | The email address to send the order document to. | 
+**mail_address_iv** | **str** | The email address to which a copy of the order document will be sent. | 
 **osid_order_document** | **int** | The OSID number of the order document. | 
 **transaction_id** | **str** | A unique transaction ID, automatically generated for the sending order document transaction. | [optional] 
 **state** | **str** | The current state of the transaction (e.g., &#39;initial&#39;, &#39;processing&#39;, &#39;completed&#39;). | [optional] [default to 'initial']
